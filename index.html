@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauve Detailing | Premium Mobile Car Detailing</title>
+    
+    <!-- SEO & Geo Meta Tags -->
+    <meta name="description" content="Sauve Detailing offers premium, frictionless mobile car detailing. Book your exterior, interior, or full detail online instantly. Luxury service without the luxury price tag.">
+    <meta name="keywords" content="car detailing, mobile detailing, auto detailing, interior detail, exterior detail, ceramic coating, car wash, Sauve Detailing">
+    <meta name="author" content="Sauve Detailing">
+    <meta name="geo.region" content="CA-QC">
+    <meta name="geo.placename" content="Montreal">
+    <meta name="geo.position" content="45.5017;-73.5673">
+    <meta name="ICBM" content="45.5017, -73.5673">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Sauve Detailing | Premium Mobile Car Detailing">
+    <meta property="og:description" content="Book your premium auto detail online in minutes. We come to you.">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoBodyShop",
+      "name": "Sauve Detailing",
+      "image": "",
+      "url": "https://sauvedetailing.com",
+      "telephone": "",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montreal",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "description": "Premium mobile car detailing services. Book online instantly.",
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Exterior Detail"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full Detail"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Detail"}}
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        primaryHover: '#2563eb', // blue-600
+                        darkBg: '#0f172a', // slate-900
+                        darkCard: '#1e293b', // slate-800
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* Custom Styles & Animations */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Calculator Checkbox Styles */
+        .calc-checkbox:checked + label,
+        .calc-radio:checked + label {
+            border-color: #3b82f6;
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+        .dark .calc-checkbox:checked + label,
+        .dark .calc-radio:checked + label {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .tab-active {
+            border-bottom: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .dark .tab-active {
+            color: #60a5fa;
+            border-bottom-color: #60a5fa;
+        }
+
+        /* Smooth reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loader for booking mock */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- To add a custom logo image, uncomment the img tag below and remove the icon/text span -->
+                    <!-- <img src="your-logo.png" alt="Sauve Detailing Logo" class="h-10 w-auto"> -->
+                    <i class="ph ph-sparkle text-3xl text-primary"></i>
+                    <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#packages" class="hover:text-primary transition font-medium" data-i18n="nav_packages">Packages</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <a href="#services" class="hover:text-primary transition font-medium flex items-center gap-1 py-6">
+                            <span data-i18n="nav_services">Services</span> <i class="ph-bold ph-caret-down text-xs mt-0.5"></i>
+                        </a>
+                        <!-- Dropdown panel -->
+                        <div class="absolute top-full left-0 w-64 bg-white dark:bg-darkCard rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden -mt-2">
+                            <div class="py-2">
+                                <a href="interior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Interior Detailing</a>
+                                <a href="exterior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Exterior Wash & Wax</a>
+                                <a href="paint-correction.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Paint Correction</a>
+                                <a href="ceramic-coating.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Ceramic Coating</a>
+                                <a href="headlight-restoration.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Headlight Restoration</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#gallery" class="hover:text-primary transition font-medium" data-i18n="nav_gallery">Gallery</a>
+                    <a href="contact.html" class="hover:text-primary transition font-medium" data-i18n="nav_contact">Contact Us</a>
+                    
+                    <!-- Controls -->
+                    <div class="flex items-center space-x-4 border-l border-gray-300 dark:border-gray-700 pl-4">
+                        <button onclick="toggleLang()" class="font-bold hover:text-primary transition w-8 text-center" id="langToggle">FR</button>
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+                            <i class="ph ph-moon text-xl block dark:hidden" id="themeIconDark"></i>
+                            <i class="ph ph-sun text-xl hidden dark:block text-yellow-400" id="themeIconLight"></i>
+                        </button>
+                    </div>
+
+                    <a href="#booking" class="bg-primary hover:bg-primaryHover text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-full" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl block dark:hidden"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button class="mobile-menu-button p-2 text-2xl">
+                        <i class="ph ph-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden mobile-menu bg-white dark:bg-darkCard border-b dark:border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
+                
+                <!-- Mobile Services Dropdown -->
+                <a href="#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
+                <div class="space-y-1 pl-4 border-l-2 border-gray-100 dark:border-gray-800 ml-4 mb-2">
+                    <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Interior Detailing</a>
+                    <a href="exterior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Exterior Wash & Wax</a>
+                    <a href="paint-correction.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Paint Correction</a>
+                    <a href="ceramic-coating.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ceramic Coating</a>
+                    <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Headlight Restoration</a>
+                </div>
+
+                <a href="#gallery" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_gallery">Gallery</a>
+                <a href="contact.html" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_contact">Contact Us</a>
+                <button onclick="toggleLang()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" id="mobileLangToggle">Switch to French</button>
+                <a href="#booking" class="block text-center mt-4 bg-primary text-white px-3 py-3 rounded-lg font-semibold" data-i18n="nav_book">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 w-full h-full bg-black">
+            <!-- Using a reliable high-quality car video placeholder -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-washing-a-black-car-with-a-sponge-2868-large.mp4" type="video/mp4">
+            </video>
+            <!-- Fallback overlay to ensure text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-darkBg"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-blue-300 border border-blue-500/30 text-sm font-semibold mb-6 uppercase tracking-wider backdrop-blur-sm reveal" data-i18n="hero_badge">Premium Mobile Service</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight reveal" style="transition-delay: 100ms;">
+                <span data-i18n="hero_title1">Showroom Finish,</span><br>
+                <span class="gradient-text" data-i18n="hero_title2">Delivered to You.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;" data-i18n="hero_subtitle">
+                Frictionless online booking, premium products, and expert techniques. Choose your package and let us handle the rest.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center reveal" style="transition-delay: 300ms;">
+                <a href="#booking" class="bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg shadow-blue-500/40 flex items-center justify-center gap-2">
+                    <span data-i18n="hero_cta1">Book Instantly</span> <i class="ph-bold ph-arrow-right"></i>
+                </a>
+                <a href="#packages" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center gap-2">
+                    <span data-i18n="hero_cta2">View Packages</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden md:block">
+            <a href="#features" class="text-white/50 hover:text-white transition">
+                <i class="ph ph-caret-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Features -->
+    <section id="features" class="py-20 bg-white dark:bg-darkBg relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center p-6 glass-card rounded-2xl reveal">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full flex items-center justify-center text-3xl mb-6">
+                        <i class="ph-fill ph-car-profile"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_1_title">We Come To You</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="feat_1_desc">Home or office, we bring our fully equipped mobile unit to your location.</p>
+                </div>
+                <div class="text-center p-6 glass-card rounded-2xl reveal" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full flex items-center justify-center text-3xl mb-6">
+                        <i class="ph-fill ph-sparkle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_2_title">Professional Quality</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="feat_2_desc">We use premium products and techniques to ensure a showroom finish every time.</p>
+                </div>
+                <div class="text-center p-6 glass-card rounded-2xl reveal" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full flex items-center justify-center text-3xl mb-6">
+                        <i class="ph-fill ph-tag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_3_title">Competitive Pricing</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="feat_3_desc">Luxury service without the luxury price tag. Transparent quotes, no hidden fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-gray-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2" data-i18n="pkg_sub">Our Packages</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold mb-4" data-i18n="pkg_title">Choose the Perfect Detail</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Exterior -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 reveal">
+                    <div class="mb-6">
+                        <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_ext_title">Exterior Detail</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$75</div>
+                        <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f1">Detailed Hand Wash</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f2">Rims & Tire</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f3">Bug & Tar Removal</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f4">3-Month Wax Protection</span></li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('exterior')" class="mt-auto block w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition" data-i18n="btn_book">Book Now</a>
+                </div>
+
+                <!-- Full Detail (Popular) -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border-primary dark:border-primary shadow-xl shadow-blue-500/10 reveal" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg" data-i18n="badge_popular">MOST POPULAR</div>
+                    <div class="mb-6">
+                        <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_full_title">Full Detail</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$150</div>
+                        <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f1">Full Interior Detail</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f2">Full Exterior Detail</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f3">Deep Clean</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f4">Professionally Done</span></li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('full')" class="mt-auto block w-full text-center py-3 rounded-xl bg-primary text-white font-bold hover:bg-primaryHover transition" data-i18n="btn_book">Book Now</a>
+                </div>
+
+                <!-- Interior -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="mb-6">
+                        <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_int_title">Interior Detail</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$98</div>
+                        <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f1">Vacuum</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f2">Steam Clean</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f3">Door Jambs, Cracks & Crevices</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f4">Detail Trunk</span></li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('interior')" class="mt-auto block w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition" data-i18n="btn_book">Book Now</a>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 300ms;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
+                    <div class="mb-6 z-10">
+                        <h4 class="text-2xl font-bold mb-1" data-i18n="pkg_maint_title">Maintenance Plan</h4>
+                        <p class="text-xs text-primary font-semibold mb-4 uppercase tracking-wide" data-i18n="maint_sub">Keep it shining all year</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-1" data-i18n="pkg_starts">Starts From</p>
+                        <div class="text-4xl font-extrabold text-gray-800 dark:text-gray-100 mb-6">$80 <span class="text-lg text-gray-400 font-normal">/mo</span></div>
+                        <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-primary"></i> <span data-i18n="maint_f1">Bi-Weekly Service</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-primary"></i> <span data-i18n="maint_f2">Monthly Service</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-check text-primary"></i> <span data-i18n="maint_f3">Discounts on Add-ons</span></li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-star text-yellow-500"></i> <span data-i18n="maint_f4">Perfect for busy schedules!</span></li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('maintenance')" class="mt-auto z-10 block w-full text-center py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold hover:bg-gray-800 dark:hover:bg-gray-200 transition" data-i18n="btn_inquire">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Breakdown Tabs -->
+    <section id="services" class="py-24 bg-white dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2" data-i18n="srv_sub">The Details</h2>
+                <h3 class="text-4xl font-extrabold" data-i18n="srv_title">Comprehensive Services</h3>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
+                <button onclick="switchTab('exterior-tab')" class="tab-btn px-6 py-3 rounded-full font-bold bg-gray-100 dark:bg-darkCard text-gray-500 hover:text-primary transition" id="btn-exterior-tab" data-i18n="tab_exterior">Exterior Detail</button>
+                <button onclick="switchTab('interior-tab')" class="tab-btn px-6 py-3 rounded-full font-bold bg-primary text-white shadow-lg shadow-blue-500/30 transition" id="btn-interior-tab" data-i18n="tab_interior">Interior Detail</button>
+                <button onclick="switchTab('addons-tab')" class="tab-btn px-6 py-3 rounded-full font-bold bg-gray-100 dark:bg-darkCard text-gray-500 hover:text-primary transition" id="btn-addons-tab" data-i18n="tab_addons">Add Ons</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="relative min-h-[400px]">
+                
+                <!-- Interior Content (Default Active) -->
+                <div id="interior-tab" class="tab-content absolute inset-0 opacity-100 transition-opacity duration-500">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-drop text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_seat">Seat Shampoo</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_seat_desc">Shampoo seats, removing stains and odors.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-wind text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_steam">Steam Clean</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_steam_desc">High-heat steam lifts dirt and disinfects surfaces thoroughly.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-fan text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_air">Air Compressor</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_air_desc">Blasts dust and debris from hard-to-reach areas.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-broom text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_vac">Vacuum</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_vac_desc">Powerful vacuum removes deep dirt, leaving interiors spotless.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-hand-swipe text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_wipe">Full Wipe Down</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_wipe_desc">Thoroughly clean all interior surfaces and panels.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-square text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_mats">Floor Mats</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_mats_desc">Remove dirt and stains from floor mats.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exterior Content -->
+                <div id="exterior-tab" class="tab-content absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-lifebuoy text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_rim">Rim and Tire</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_rim_desc">Removes brake dust and grime from rims and tires.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-cloud-rain text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_pre">Pre Wash</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_pre_desc">Loosens dirt and grime before hand washing.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-hand text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_hand">Hand Wash</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_hand_desc">Gentle, thorough hand wash for spotless vehicle finish.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-sparkle text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_tireshine">Tire Shine</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_tireshine_desc">Restores tire blackness with a long-lasting shine.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-wind text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_dry">Dry Vehicle</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_dry_desc">Carefully dries vehicle to prevent water spots.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-shield-check text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_wax">Hydrophobic Wax</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_wax_desc">Adds deep shine and water-repellent protection.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addons Content -->
+                <div id="addons-tab" class="tab-content absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-paw-prints text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_pet">Pet Hair Removal</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_pet_desc">Removes embedded pet hair from all interior surfaces.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-paint-roller text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_trim">Trim Restoration</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_trim_desc">Restores faded trim to like-new condition.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-rug text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_carpet">Carpet Shampoo</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_carpet_desc">Deep cleans carpets, removing stains and odors.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-soap text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_clay">Clay Bar Treatment</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_clay_desc">Removes surface contaminants for smooth, clean paint.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-snowflake text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_salt">Salt Stain Removal</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_salt_desc">Salt stains are ugly, we make your mats look fresh again.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2" data-i18n="gal_sub">Our Work</h2>
+                <h3 class="text-4xl font-extrabold" data-i18n="gal_title">Showroom Results</h3>
+            </div>
+
+            <!-- CSS Grid Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
+                <!-- Using placeholder images that look premium -->
+                <div class="aspect-square rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=800" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&q=80&w=800" alt="Clean car interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="Car polishing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800" alt="Car wash exterior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=800" alt="Luxury car clean" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1623659248890-df4097f48e3e?auto=format&fit=crop&q=80&w=800" alt="Headlight detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=800" alt="Car dashboard clean" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden group hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1512618831669-521d4b6db603?auto=format&fit=crop&q=80&w=800" alt="Water beading wax" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section (SEO) -->
+    <section id="areas" class="py-24 bg-gray-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-2" data-i18n="area_sub">Service Areas</h2>
+                <h3 class="text-4xl font-extrabold mb-4" data-i18n="area_title">Greater Montreal Region</h3>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="area_desc">
+                    We bring our premium mobile detailing unit directly to your driveway, workplace, or condo across these major locations and their surrounding neighborhoods.
+                </p>
+            </div>
+
+            <!-- Cities Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Montreal</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Laval</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Longueuil</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Brossard</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">West Island</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Boucherville</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Terrebonne</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Repentigny</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Blainville</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Saint-Jérôme</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Vaudreuil-Dorion</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Châteauguay</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frictionless Booking / Calculator Section -->
+    <section id="booking" class="py-24 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+        <!-- Abstract bg shapes -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                
+                <!-- Calculator Form -->
+                <div class="bg-white dark:bg-gray-800/50 backdrop-blur-xl border border-gray-200 dark:border-gray-700 p-8 rounded-3xl reveal shadow-xl dark:shadow-none">
+                    <h3 class="text-3xl font-bold mb-2" data-i18n="calc_title">Book Your Service</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-8" data-i18n="calc_desc">Configure your detail and book a date instantly.</p>
+
+                    <form id="bookingForm" onsubmit="event.preventDefault();">
+                        
+                        <!-- Step 1: Package -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step1">1. Select Package</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="col-span-2">
+                                    <input type="radio" name="package" id="pkg_full" value="150" data-name="Full Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <label for="pkg_full" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition relative">
+                                        <span class="absolute top-2 right-2 flex h-3 w-3">
+                                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                          <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                                        </span>
+                                        <div class="font-bold text-lg text-gray-800 dark:text-white" data-i18n="pkg_full_title">Full Detail</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$150</div>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="package" id="pkg_ext" value="75" data-name="Exterior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <label for="pkg_ext" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                        <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_ext_title">Exterior Detail</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$75</div>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="package" id="pkg_int" value="98" data-name="Interior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <label for="pkg_int" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                        <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_int_title">Interior Detail</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$98</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Vehicle Size -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step2">2. Vehicle Size</label>
+                            <select id="vehicleSize" onchange="calculateTotal()" class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition appearance-none shadow-sm">
+                                <option value="1" data-name="Coupe / Sedan" data-i18n="size_small">Coupe / Sedan (Base Price)</option>
+                                <option value="1.2" data-name="Small SUV" data-i18n="size_med">Small SUV / Crossover (+20%)</option>
+                                <option value="1.4" data-name="Large SUV" data-i18n="size_large">Large SUV / Truck / Van (+40%)</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 3: Add-ons -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step3">3. Customize (Add-ons)</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="30" data-name="Pet Hair">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_pet">Pet Hair</span> <span class="text-gray-500 dark:text-gray-400">(+$30)</span></span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="40" data-name="Carpet Shampoo">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_carpet">Carpet Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$40)</span></span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="40" data-name="Seat Shampoo">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_seat">Seat Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$40)</span></span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Salt Stain">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_salt">Salt Stain</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="35" data-name="Trim Restoration">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_trim">Trim Restoration</span> <span class="text-gray-500 dark:text-gray-400">(+$35)</span></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Total & Action -->
+                        <div class="border-t border-gray-200 dark:border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm mb-1" data-i18n="calc_total_est">Estimated Total</p>
+                                <div class="text-4xl font-extrabold text-gray-900 dark:text-white" id="grandTotal">$0.00</div>
+                            </div>
+                            
+                            <!-- Action Button -->
+                            <div class="flex flex-col gap-3 w-full sm:w-auto">
+                                <button type="button" onclick="initiateCheckout()" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 w-full">
+                                    <i class="ph-bold ph-calendar-plus"></i> <span data-i18n="btn_book_cal">Schedule Booking</span>
+                                    <div class="loader !border-gray-300 !border-t-white" id="loaderCal"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info Side -->
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <div class="mb-10">
+                        <i class="ph-fill ph-calendar-check text-5xl text-primary mb-4"></i>
+                        <h3 class="text-3xl font-bold mb-4" data-i18n="book_side_title">Frictionless Scheduling</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed" data-i18n="book_side_desc">
+                            We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0 text-green-500 dark:text-green-400 border border-gray-200 dark:border-gray-700">
+                                <i class="ph-bold ph-shield-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg text-gray-900 dark:text-white mb-1" data-i18n="trust_1_title">Secure Payment</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="trust_1_desc">Your data is encrypted and handled by industry-leading processors.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0 text-blue-500 dark:text-blue-400 border border-gray-200 dark:border-gray-700">
+                                <i class="ph-bold ph-map-pin text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg text-gray-900 dark:text-white mb-1" data-i18n="trust_2_title">We Travel To You</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="trust_2_desc">Fully mobile setup requires only your keys.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Mock Modal for Checkout Demo -->
+        <div id="checkoutModal" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center backdrop-blur-sm opacity-0 transition-opacity duration-300">
+            <div class="bg-white dark:bg-darkCard p-8 rounded-3xl max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="modalContent">
+                <div class="text-center">
+                    <i id="modalIcon" class="ph-fill ph-check-circle text-6xl text-green-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white" id="modalTitle">Connecting...</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" id="modalDesc">Redirecting you to the secure booking portal.</p>
+                    
+                    <!-- Captured Data Display -->
+                    <div class="bg-gray-100 dark:bg-gray-900 rounded-xl p-4 mb-6 text-left border border-gray-200 dark:border-gray-700">
+                        <p class="text-xs text-primary font-bold uppercase tracking-wider mb-2">Captured Booking Data:</p>
+                        <pre id="modalData" class="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono"></pre>
+                    </div>
+
+                    <button onclick="closeModal()" class="w-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3 rounded-xl transition">Close Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="ph ph-sparkle text-3xl text-primary"></i>
+                        <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-tiktok-logo text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_links">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#packages" class="hover:text-primary transition">Packages</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition">Gallery</a></li>
+                        <li><a href="#booking" class="hover:text-primary transition">Book Online</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_services">Top Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition">Full Detail</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Interior Deep Clean</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Exterior Wash & Wax</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Maintenance Plan</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_contact">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-map-pin mt-1 text-primary"></i>
+                            <span>Mobile Service based in<br>Montreal, QC</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-phone text-primary"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-envelope text-primary"></i>
+                            <span>hello@sauvedetailing.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Sauve Detailing. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. Theme Toggling ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // Initialize Theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // --- 2. Mobile Menu ---
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+
+
+        // --- 3. Scroll Reveal Animation ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger once on load
+
+
+        // --- 4. Tabs Logic ---
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('opacity-100', 'pointer-events-auto');
+                content.classList.add('opacity-0', 'pointer-events-none');
+            });
+            // Reset all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn px-6 py-3 rounded-full font-bold bg-gray-100 dark:bg-darkCard text-gray-500 hover:text-primary transition';
+            });
+
+            // Show selected content
+            const activeContent = document.getElementById(tabId);
+            activeContent.classList.remove('opacity-0', 'pointer-events-none');
+            activeContent.classList.add('opacity-100', 'pointer-events-auto');
+
+            // Highlight button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.className = 'tab-btn px-6 py-3 rounded-full font-bold bg-primary text-white shadow-lg shadow-blue-500/30 transition';
+        }
+
+
+        // --- 5. Calculator Logic ---
+        let currentBookingData = {}; // Store the current selection
+
+        function selectPackage(pkgStr) {
+            let id = '';
+            if(pkgStr === 'exterior') id = 'pkg_ext';
+            if(pkgStr === 'interior') id = 'pkg_int';
+            if(pkgStr === 'full') id = 'pkg_full';
+            if(pkgStr === 'maintenance') id = 'pkg_full'; // fallback for UI calc demo
+            
+            if(document.getElementById(id)) {
+                document.getElementById(id).checked = true;
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() {
+            // Get base package price
+            let basePrice = 0;
+            let packageName = 'No Package Selected';
+            const radios = document.querySelectorAll('input[name="package"]');
+            radios.forEach(radio => {
+                if (radio.checked) {
+                    basePrice = parseFloat(radio.value);
+                    packageName = radio.getAttribute('data-name');
+                }
+            });
+
+            // Get size multiplier
+            const sizeSelect = document.getElementById('vehicleSize');
+            const sizeMultiplier = parseFloat(sizeSelect.value);
+            const sizeName = sizeSelect.options[sizeSelect.selectedIndex].getAttribute('data-name');
+
+            // Get Add-ons sum
+            let addonsSum = 0;
+            let selectedAddons = [];
+            const checks = document.querySelectorAll('.addon-check');
+            checks.forEach(check => {
+                if (check.checked) {
+                    addonsSum += parseFloat(check.value);
+                    selectedAddons.push(check.getAttribute('data-name'));
+                }
+            });
+
+            // Calculate final
+            const total = (basePrice * sizeMultiplier) + addonsSum;
+
+            // Save state for checkout
+            currentBookingData = {
+                package: packageName,
+                vehicleSize: sizeName,
+                addons: selectedAddons.length > 0 ? selectedAddons.join(", ") : "None",
+                total: '$' + total.toFixed(2)
+            };
+
+            // Animate number change (simple version)
+            document.getElementById('grandTotal').innerText = currentBookingData.total;
+        }
+
+        // Initialize calculator on load
+        calculateTotal();
+
+        // Add event listeners to addons manually to ensure updates when clicked
+        document.querySelectorAll('.addon-check').forEach(check => {
+            check.addEventListener('change', calculateTotal);
+        });
+
+        // --- 6. Mock Checkout Handlers ---
+        function initiateCheckout() {
+            const btnCalText = document.querySelector('button[onclick="initiateCheckout()"] span');
+            const loaderCal = document.getElementById('loaderCal');
+            
+            const modal = document.getElementById('checkoutModal');
+            const modalContent = document.getElementById('modalContent');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalData = document.getElementById('modalData');
+
+            // Show Loading state on button
+            btnCalText.style.display = 'none';
+            loaderCal.style.display = 'block';
+
+            // Simulate API Call delay
+            setTimeout(() => {
+                // Reset buttons
+                btnCalText.style.display = 'block';
+                loaderCal.style.display = 'none';
+
+                // Display captured data string (This simulates how we pass it to URL params)
+                const dataString = `Package: ${currentBookingData.package}\nSize: ${currentBookingData.vehicleSize}\nAdd-ons: ${currentBookingData.addons}\nTotal: ${currentBookingData.total}`;
+                modalData.innerText = dataString;
+
+                // Setup Modal
+                modalIcon.className = "ph-fill ph-calendar-check text-6xl text-primary mb-4";
+                modalTitle.innerText = "Connecting Booking System";
+                modalDesc.innerText = "In production, this passes data to your calendar booking and payment link seamlessly.";
+
+                // Show Modal
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                }, 10);
+
+            }, 1000);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('checkoutModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // --- 7. i18n Translation Logic (English / French) ---
+        let currentLang = 'en';
+
+        const dictionary = {
+            en: {
+                nav_packages: "Packages", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact Us", nav_book: "Book Now",
+                hero_badge: "Premium Mobile Service", hero_title1: "Showroom Finish,", hero_title2: "Delivered to You.",
+                hero_subtitle: "Frictionless online booking, premium products, and expert techniques. Choose your package and let us handle the rest.",
+                hero_cta1: "Book Instantly", hero_cta2: "View Packages",
+                feat_1_title: "We Come To You", feat_1_desc: "Home or office, we bring our fully equipped mobile unit to your location.",
+                feat_2_title: "Professional Quality", feat_2_desc: "We use premium products and techniques to ensure a showroom finish every time.",
+                feat_3_title: "Competitive Pricing", feat_3_desc: "Luxury service without the luxury price tag. Transparent quotes, no hidden fees.",
+                pkg_sub: "Our Packages", pkg_title: "Choose the Perfect Detail", pkg_starts: "Starts From",
+                pkg_ext_title: "Exterior Detail", ext_f1: "Detailed Hand Wash", ext_f2: "Rims & Tire", ext_f3: "Bug & Tar Removal", ext_f4: "3-Month Wax Protection",
+                badge_popular: "MOST POPULAR", pkg_full_title: "Full Detail", full_f1: "Full Interior Detail", full_f2: "Full Exterior Detail", full_f3: "Deep Clean", full_f4: "Professionally Done",
+                pkg_int_title: "Interior Detail", int_f1: "Vacuum", int_f2: "Steam Clean", int_f3: "Door Jambs, Cracks & Crevices", int_f4: "Detail Trunk",
+                pkg_maint_title: "Maintenance Plan", maint_sub: "Keep it shining all year", maint_f1: "Bi-Weekly Service", maint_f2: "Monthly Service", maint_f3: "Discounts on Add-ons", maint_f4: "Perfect for busy schedules!",
+                btn_book: "Book Now", btn_inquire: "Inquire Now",
+                srv_sub: "The Details", srv_title: "Comprehensive Services",
+                tab_exterior: "Exterior Detail", tab_interior: "Interior Detail", tab_addons: "Add Ons",
+                srv_seat: "Seat Shampoo", srv_seat_desc: "Shampoo seats, removing stains and odors.",
+                srv_steam: "Steam Clean", srv_steam_desc: "High-heat steam lifts dirt and disinfects surfaces thoroughly.",
+                srv_air: "Air Compressor", srv_air_desc: "Blasts dust and debris from hard-to-reach areas.",
+                srv_vac: "Vacuum", srv_vac_desc: "Powerful vacuum removes deep dirt, leaving interiors spotless.",
+                srv_wipe: "Full Wipe Down", srv_wipe_desc: "Thoroughly clean all interior surfaces and panels.",
+                srv_mats: "Floor Mats", srv_mats_desc: "Remove dirt and stains from floor mats.",
+                srv_rim: "Rim and Tire", srv_rim_desc: "Removes brake dust and grime from rims and tires.",
+                srv_pre: "Pre Wash", srv_pre_desc: "Loosens dirt and grime before hand washing.",
+                srv_hand: "Hand Wash", srv_hand_desc: "Gentle, thorough hand wash for spotless vehicle finish.",
+                srv_tireshine: "Tire Shine", srv_tireshine_desc: "Restores tire blackness with a long-lasting shine.",
+                srv_dry: "Dry Vehicle", srv_dry_desc: "Carefully dries vehicle to prevent water spots.",
+                srv_wax: "Hydrophobic Wax", srv_wax_desc: "Adds deep shine and water-repellent protection.",
+                srv_pet: "Pet Hair Removal", srv_pet_desc: "Removes embedded pet hair from all interior surfaces.",
+                srv_trim: "Trim Restoration", srv_trim_desc: "Restores faded trim to like-new condition.",
+                srv_carpet: "Carpet Shampoo", srv_carpet_desc: "Deep cleans carpets, removing stains and odors.",
+                srv_clay: "Clay Bar Treatment", srv_clay_desc: "Removes surface contaminants for smooth, clean paint.",
+                srv_salt: "Salt Stain Removal", srv_salt_desc: "Salt stains are ugly, we make your mats look fresh again.",
+                calc_title: "Book Your Service", calc_desc: "Configure your detail and book a date instantly.",
+                calc_step1: "1. Select Package", calc_step2: "2. Vehicle Size", calc_step3: "3. Customize (Add-ons)",
+                size_small: "Coupe / Sedan (Base Price)", size_med: "Small SUV / Crossover (+20%)", size_large: "Large SUV / Truck / Van (+40%)",
+                calc_total_est: "Estimated Total", btn_book_cal: "Schedule Booking",
+                book_side_title: "Frictionless Scheduling", book_side_desc: "We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.",
+                trust_1_title: "Secure Payment", trust_1_desc: "Your data is encrypted and handled by industry-leading processors.",
+                trust_2_title: "We Travel To You", trust_2_desc: "Fully mobile setup requires only your keys.",
+                gal_sub: "Our Work", gal_title: "Showroom Results",
+                area_sub: "Service Areas", area_title: "Greater Montreal Region", area_desc: "We bring our premium mobile detailing unit directly to your driveway, workplace, or condo across these major locations and their surrounding neighborhoods.",
+                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
+            },
+            fr: {
+                nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver",
+                hero_badge: "Service Mobile Premium", hero_title1: "Finition de salle de montre,", hero_title2: "Livrée chez vous.",
+                hero_subtitle: "Réservation en ligne sans friction, produits premium et techniques expertes. Choisissez votre forfait, on s'occupe du reste.",
+                hero_cta1: "Réserver Instantanément", hero_cta2: "Voir les Forfaits",
+                feat_1_title: "Nous venons à vous", feat_1_desc: "À domicile ou au bureau, nous apportons notre unité mobile entièrement équipée.",
+                feat_2_title: "Qualité Professionnelle", feat_2_desc: "Nous utilisons des produits et techniques haut de gamme pour garantir un résultat impeccable.",
+                feat_3_title: "Prix Compétitifs", feat_3_desc: "Un service de luxe sans le prix de luxe. Soumissions transparentes, sans frais cachés.",
+                pkg_sub: "Nos Forfaits", pkg_title: "Choisissez l'Esthétique Parfaite", pkg_starts: "À partir de",
+                pkg_ext_title: "Esthétique Extérieure", ext_f1: "Lavage à la main détaillé", ext_f2: "Jantes et Pneus", ext_f3: "Enlèvement d'insectes", ext_f4: "Protection Cire 3-Mois",
+                badge_popular: "TRÈS POPULAIRE", pkg_full_title: "Esthétique Complète", full_f1: "Intérieur Complet", full_f2: "Extérieur Complet", full_f3: "Nettoyage en Profondeur", full_f4: "Fait par des professionnels",
+                pkg_int_title: "Esthétique Intérieure", int_f1: "Aspirateur", int_f2: "Nettoyage Vapeur", int_f3: "Cadres de portes et Crevasses", int_f4: "Nettoyage du Coffre",
+                pkg_maint_title: "Plan d'Entretien", maint_sub: "Gardez-la brillante toute l'année", maint_f1: "Service Bihebdomadaire", maint_f2: "Service Mensuel", maint_f3: "Rabais sur les suppléments", maint_f4: "Parfait pour les horaires chargés!",
+                btn_book: "Réserver", btn_inquire: "S'informer",
+                srv_sub: "Les Détails", srv_title: "Services Complets",
+                tab_exterior: "Extérieur", tab_interior: "Intérieur", tab_addons: "Suppléments",
+                srv_seat: "Shampoing des Sièges", srv_seat_desc: "Nettoie les sièges, enlève les taches et odeurs.",
+                srv_steam: "Nettoyage Vapeur", srv_steam_desc: "La vapeur à haute chaleur désinfecte et déloge la saleté.",
+                srv_air: "Compresseur d'Air", srv_air_desc: "Souffle la poussière des endroits difficiles d'accès.",
+                srv_vac: "Aspirateur", srv_vac_desc: "Enlève la saleté incrustée, laissant un intérieur impeccable.",
+                srv_wipe: "Essuyage Complet", srv_wipe_desc: "Nettoyage minutieux de toutes les surfaces et panneaux.",
+                srv_mats: "Tapis protecteurs", srv_mats_desc: "Enlève la saleté et les taches des tapis.",
+                srv_rim: "Jantes et Pneus", srv_rim_desc: "Enlève la poussière de frein et la crasse.",
+                srv_pre: "Pré-Lavage", srv_pre_desc: "Déloge la saleté avant le lavage à la main.",
+                srv_hand: "Lavage à la main", srv_hand_desc: "Lavage doux et complet pour une finition sans taches.",
+                srv_tireshine: "Lustre à pneus", srv_tireshine_desc: "Restaure la noirceur des pneus avec un éclat durable.",
+                srv_dry: "Séchage", srv_dry_desc: "Séchage minutieux pour éviter les taches d'eau.",
+                srv_wax: "Cire Hydrophobe", srv_wax_desc: "Ajoute une brillance profonde et une protection hydrofuge.",
+                srv_pet: "Poils d'Animaux", srv_pet_desc: "Enlève les poils d'animaux incrustés de toutes les surfaces.",
+                srv_trim: "Restauration des Garnitures", srv_trim_desc: "Restaure les plastiques décolorés à l'état neuf.",
+                srv_carpet: "Shampoing des Tapis", srv_carpet_desc: "Nettoie en profondeur les tapis, enlève taches et odeurs.",
+                srv_clay: "Barre d'Argile (Clay Bar)", srv_clay_desc: "Enlève les contaminants de surface pour une peinture lisse.",
+                srv_salt: "Enlèvement de Sel", srv_salt_desc: "Les taches de sel sont laides, nous rafraîchissons vos tapis.",
+                calc_title: "Réservez Votre Service", calc_desc: "Configurez votre esthétique et réservez une date instantanément.",
+                calc_step1: "1. Sélectionner un Forfait", calc_step2: "2. Taille du Véhicule", calc_step3: "3. Personnaliser (Suppléments)",
+                size_small: "Coupé / Berline (Prix de Base)", size_med: "Petit VUS / Multisegment (+20%)", size_large: "Grand VUS / Camion / Fourgonnette (+40%)",
+                calc_total_est: "Total Estimé", btn_book_cal: "Planifier la Réservation",
+                book_side_title: "Planification Sans Friction", book_side_desc: "Nous avons intégré des flux de réservation transparents. Sélectionnez vos forfaits et bloquez votre plage horaire sur notre calendrier. Le paiement sécurisé est collecté lors de la réservation.",
+                trust_1_title: "Paiement Sécurisé", trust_1_desc: "Vos données sont cryptées et traitées par des leaders de l'industrie.",
+                trust_2_title: "Nous nous déplaçons", trust_2_desc: "L'installation mobile ne nécessite que vos clés.",
+                gal_sub: "Notre Travail", gal_title: "Résultats de Salle de Montre",
+                area_sub: "Zones Desservies", area_title: "Région du Grand Montréal", area_desc: "Nous apportons notre unité d'esthétique mobile premium directement dans votre entrée, lieu de travail ou condo à travers ces secteurs principaux et leurs quartiers environnants.",
+                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous"
+            }
+        };
+
+        function toggleLang() {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            
+            // Update toggle buttons text
+            document.getElementById('langToggle').innerText = currentLang === 'en' ? 'FR' : 'EN';
+            document.getElementById('mobileLangToggle').innerText = currentLang === 'en' ? 'Switch to French' : 'Passer en Anglais';
+            
+            // Change document language
+            document.documentElement.lang = currentLang;
+
+            // Translate all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dictionary[currentLang][key]) {
+                    el.innerHTML = dictionary[currentLang][key]; // Using innerHTML in case of <span> tags
+                }
+            });
+        }
+    </script>
+</body>
+</html>
