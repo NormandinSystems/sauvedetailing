@@ -114,8 +114,8 @@
                         </a>
                         <div class="absolute top-full left-0 w-64 bg-white dark:bg-darkCard rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden -mt-2">
                             <div class="py-2">
-                                <a href="interior-detailing.html" class="block px-5 py-3 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 transition">Interior Detailing</a>
-                                <a href="exterior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Exterior Wash & Wax</a>
+                                <a href="interior-detailing.html" class="block px-5 py-3 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 transition" data-i18n="ft_svc_int">Interior Detailing</a>
+                                <a href="exterior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition" data-i18n="ft_svc_ext">Exterior Wash & Wax</a>
                                 <a href="paint-correction.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Paint Correction</a>
                                 <a href="ceramic-coating.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Ceramic Coating</a>
                                 <a href="headlight-restoration.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Headlight Restoration</a>
@@ -157,8 +157,8 @@
                 <a href="index.html#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
                 <a href="index.html#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
                 <div class="space-y-1 pl-4 border-l-2 border-gray-100 dark:border-gray-800 ml-4 mb-2">
-                    <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg">Interior Detailing</a>
-                    <a href="exterior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Exterior Wash & Wax</a>
+                    <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg" data-i18n="ft_svc_int">Interior Detailing</a>
+                    <a href="exterior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="ft_svc_ext">Exterior Wash & Wax</a>
                     <a href="paint-correction.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Paint Correction</a>
                     <a href="ceramic-coating.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ceramic Coating</a>
                     <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Headlight Restoration</a>
@@ -276,17 +276,21 @@
                         <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="side_title">Ready for a fresh cabin?</h4>
                         <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm" data-i18n="side_desc">Book our Interior Detail package online in seconds. We bring the water, power, and expertise to you.</p>
                         
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between items-center pb-4 border-b border-gray-100 dark:border-gray-800">
-                                <span class="font-semibold text-gray-700 dark:text-gray-300" data-i18n="side_price_label">Starting Price:</span>
-                                <span class="text-2xl font-bold text-primary">$98</span>
+                        <div class="space-y-3 mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-gray-700 dark:text-gray-300" data-i18n="side_price_sedan">Sedans & SUVs:</span>
+                                <span class="text-xl font-bold text-primary">$150</span>
                             </div>
-                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f1">Takes 1.5 - 3 Hours</span></li>
-                                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f2">We come to your location</span></li>
-                                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f3">Pet hair & stain add-ons available</span></li>
-                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-gray-700 dark:text-gray-300" data-i18n="side_price_truck">Vans, 3-Rows & Trucks:</span>
+                                <span class="text-xl font-bold text-primary">$190</span>
+                            </div>
                         </div>
+                        <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f1">Takes 1.5 - 3 Hours</span></li>
+                            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f2">We come to your location</span></li>
+                            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f3">Pet hair & stain add-ons available</span></li>
+                        </ul>
 
                         <a href="index.html#booking" class="block w-full text-center bg-primary hover:bg-primaryHover text-white py-3 rounded-xl font-bold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
                         <p class="text-center text-xs text-gray-400 mt-4" data-i18n="side_secure">Secure scheduling. Pay after service.</p>
@@ -306,7 +310,7 @@
                         <i class="ph ph-sparkle text-3xl text-primary"></i>
                         <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
+                    <p class="text-gray-400 text-sm mb-6" data-i18n="ft_desc">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
                     <div class="flex gap-4">
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
@@ -317,20 +321,20 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_links">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Packages</a></li>
-                        <li><a href="index.html#services" class="hover:text-primary transition">Services</a></li>
-                        <li><a href="index.html#gallery" class="hover:text-primary transition">Gallery</a></li>
-                        <li><a href="index.html#booking" class="hover:text-primary transition">Book Online</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_link_packages">Packages</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition" data-i18n="ft_link_services">Services</a></li>
+                        <li><a href="index.html#gallery" class="hover:text-primary transition" data-i18n="ft_link_gallery">Gallery</a></li>
+                        <li><a href="index.html#booking" class="hover:text-primary transition" data-i18n="ft_link_book">Book Online</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_services">Top Services</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Full Detail</a></li>
-                        <li><a href="interior-detailing.html" class="hover:text-primary transition">Interior Deep Clean</a></li>
-                        <li><a href="exterior-detailing.html" class="hover:text-primary transition">Exterior Wash & Wax</a></li>
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Maintenance Plan</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_svc_full">Full Detail</a></li>
+                        <li><a href="interior-detailing.html" class="hover:text-primary transition" data-i18n="ft_svc_int">Interior Deep Clean</a></li>
+                        <li><a href="exterior-detailing.html" class="hover:text-primary transition" data-i18n="ft_svc_ext">Exterior Wash & Wax</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_svc_maint">Maintenance Plan</a></li>
                     </ul>
                 </div>
 
@@ -339,7 +343,7 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex items-start gap-3">
                             <i class="ph-fill ph-map-pin mt-1 text-primary"></i>
-                            <span>Mobile Service based in<br>Montreal, QC</span>
+                            <span data-i18n="ft_addr">Mobile Service based in<br>Montreal, QC</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ph-fill ph-phone text-primary"></i>
@@ -354,10 +358,10 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p>&copy; 2026 Sauve Detailing. All rights reserved.</p>
+                <p data-i18n="ft_copy">&copy; 2026 Sauve Detailing. All rights reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_terms">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -411,9 +415,15 @@
                 ben2_title: "Maximized Resale Value", ben2_desc: "A clean, odor-free interior is the #1 factor buyers notice. A professional detail can easily add hundreds of dollars to your car's trade-in value.",
                 
                 side_title: "Ready for a fresh cabin?", side_desc: "Book our Interior Detail package online in seconds. We bring the water, power, and expertise to you.",
-                side_price_label: "Starting Price:", side_f1: "Takes 1.5 - 3 Hours", side_f2: "We come to your location", side_f3: "Pet hair & stain add-ons available", side_secure: "Secure scheduling. Pay after service.",
+                side_price_sedan: "Sedans & SUVs:", side_price_truck: "Vans, 3-Rows & Trucks:", 
+                side_f1: "Takes 1.5 - 3 Hours", side_f2: "We come to your location", side_f3: "Pet hair & stain add-ons available", side_secure: "Secure scheduling. Pay after service.",
 
-                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
+                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us",
+                ft_desc: "Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.",
+                ft_link_packages: "Packages", ft_link_services: "Services", ft_link_gallery: "Gallery", ft_link_book: "Book Online",
+                ft_svc_full: "Full Detail", ft_svc_int: "Interior Deep Clean", ft_svc_ext: "Exterior Wash & Wax", ft_svc_maint: "Maintenance Plan",
+                ft_addr: "Mobile Service based in<br>Montreal, QC", ft_copy: "&copy; 2026 Sauve Detailing. All rights reserved.",
+                ft_privacy: "Privacy Policy", ft_terms: "Terms of Service"
             },
             fr: {
                 nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver",
@@ -436,9 +446,15 @@
                 ben2_title: "Valeur de Revente Maximisée", ben2_desc: "Un intérieur propre et sans odeur est le facteur numéro un que les acheteurs remarquent. Un nettoyage professionnel peut facilement ajouter des centaines de dollars à la valeur de votre voiture.",
                 
                 side_title: "Prêt pour un habitacle frais ?", side_desc: "Réservez notre forfait Intérieur en ligne en quelques secondes. Nous apportons l'eau, l'électricité et l'expertise.",
-                side_price_label: "Prix de départ:", side_f1: "Prend de 1.5 à 3 Heures", side_f2: "Nous venons à vous", side_f3: "Options pour poils et taches disponibles", side_secure: "Planification sécurisée. Payez après le service.",
+                side_price_sedan: "Berlines et VUS:", side_price_truck: "Fourgonnettes et Camions:", 
+                side_f1: "Prend de 1.5 à 3 Heures", side_f2: "Nous venons à vous", side_f3: "Options pour poils et taches disponibles", side_secure: "Planification sécurisée. Payez après le service.",
 
-                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous"
+                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous",
+                ft_desc: "Esthétique automobile mobile haut de gamme desservant la grande région. Nous apportons la salle de montre dans votre entrée.",
+                ft_link_packages: "Forfaits", ft_link_services: "Services", ft_link_gallery: "Galerie", ft_link_book: "Réserver en ligne",
+                ft_svc_full: "Esthétique Complète", ft_svc_int: "Nettoyage Intérieur", ft_svc_ext: "Lavage et Cire Extérieur", ft_svc_maint: "Plan d'Entretien",
+                ft_addr: "Service mobile basé à<br>Montréal, QC", ft_copy: "&copy; 2026 Sauve Detailing. Tous droits réservés.",
+                ft_privacy: "Politique de confidentialité", ft_terms: "Conditions d'utilisation"
             }
         };
 
