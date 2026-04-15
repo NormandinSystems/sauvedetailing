@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Auto Detailing & Interior Cleaning | Montreal | Sauve Detailing</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get the ultimate full car detailing service in Montreal, West Island, and Laval. We combine deep interior steam cleaning with a premium exterior wash and wax.">
+    <meta name="keywords" content="full car detail Montreal, interior deep clean, car wash and wax, auto detailing package, steam clean car interior, mobile car detailing near me, complete auto detail, upholstery extraction">
+    <meta name="author" content="Sauve Detailing">
+    <meta name="geo.region" content="CA-QC">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Complete Full Auto Detailing Package",
+      "provider": {
+        "@type": "AutoBodyShop",
+        "name": "Sauve Detailing",
+        "telephone": "(450) 560-8877",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montreal",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        }
+      },
+      "description": "A comprehensive detailing package combining our signature interior deep clean (steam, extraction) and premium exterior wash with paint sealant.",
+      "areaServed": [
+        "Montreal", "West Island", "Laval", "Vaudreuil", "Mirabel", "St-Lazare"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        primaryHover: '#2563eb', // blue-600
+                        darkBg: '#0f172a', // slate-900
+                        darkCard: '#1e293b', // slate-800
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="ph ph-sparkle text-3xl text-primary"></i>
+                    <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#packages" class="hover:text-primary transition font-medium" data-i18n="nav_packages">Packages</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <a href="index.html#services" class="text-primary transition font-bold flex items-center gap-1 py-6">
+                            <span data-i18n="nav_services">Services</span> <i class="ph-bold ph-caret-down text-xs mt-0.5"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-64 bg-white dark:bg-darkCard rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden -mt-2">
+                            <div class="py-2">
+                                <a href="full-detail.html" class="block px-5 py-3 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 transition">Full Detail</a>
+                                <a href="interior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Interior Detailing</a>
+                                <a href="exterior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Exterior Wash & Wax</a>
+                                <a href="paint-correction.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Paint Correction</a>
+                                <a href="ceramic-coating.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Ceramic Coating</a>
+                                <a href="headlight-restoration.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Headlight Restoration</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#gallery" class="hover:text-primary transition font-medium" data-i18n="nav_gallery">Gallery</a>
+                    <a href="areas-served.html" class="hover:text-primary transition font-medium" data-i18n="nav_locations">Locations</a>
+                    <a href="contact.html" class="hover:text-primary transition font-medium" data-i18n="nav_contact">Contact Us</a>
+                    
+                    <!-- Controls -->
+                    <div class="flex items-center space-x-4 border-l border-gray-300 dark:border-gray-700 pl-4">
+                        <button onclick="toggleLang()" class="font-bold hover:text-primary transition w-8 text-center" id="langToggle">FR</button>
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+                            <i class="ph ph-moon text-xl block dark:hidden"></i>
+                            <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                        </button>
+                    </div>
+
+                    <a href="index.html#booking" class="bg-primary hover:bg-primaryHover text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-full" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl block dark:hidden"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button class="mobile-menu-button p-2 text-2xl">
+                        <i class="ph ph-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden mobile-menu bg-white dark:bg-darkCard border-b dark:border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
+                <a href="index.html#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
+                <div class="space-y-1 pl-4 border-l-2 border-gray-100 dark:border-gray-800 ml-4 mb-2">
+                    <a href="full-detail.html" class="block px-3 py-2 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg">Full Detail</a>
+                    <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Interior Detailing</a>
+                    <a href="exterior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Exterior Wash & Wax</a>
+                    <a href="paint-correction.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Paint Correction</a>
+                    <a href="ceramic-coating.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ceramic Coating</a>
+                    <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Headlight Restoration</a>
+                </div>
+                <a href="index.html#gallery" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_gallery">Gallery</a>
+                <a href="areas-served.html" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_locations">Locations</a>
+                <a href="contact.html" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_contact">Contact Us</a>
+                <button onclick="toggleLang()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" id="mobileLangToggle">Switch to French</button>
+                <a href="index.html#booking" class="block text-center mt-4 bg-primary text-white px-3 py-3 rounded-lg font-semibold" data-i18n="nav_book">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero Page -->
+    <section class="pt-32 pb-16 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Background Image overlay -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=2000" alt="Beautifully detailed car interior and exterior" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-blue-300 border border-blue-500/30 text-sm font-semibold mb-4 uppercase tracking-wider backdrop-blur-sm" data-i18n="hero_badge">The Ultimate Reset</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight" data-i18n="hero_title">Complete Full <span class="gradient-text">Detail</span></h1>
+                <p class="text-lg text-gray-300 mb-8" data-i18n="hero_desc">
+                    Experience that "new car feeling" all over again. We combine our rigorous interior deep cleaning with a premium exterior wash and sealant to completely transform your vehicle from the inside out.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="index.html#booking" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-full font-bold transition shadow-lg shadow-blue-500/40" data-i18n="btn_book">Book Now</a>
+                    <a href="#process" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-bold transition" data-i18n="btn_learn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & SEO Section -->
+    <section class="py-20 bg-white dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                
+                <!-- Heavy SEO Content Left -->
+                <div class="lg:col-span-2 space-y-12 text-gray-600 dark:text-gray-300">
+                    
+                    <div id="intro">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="sec1_title">Why Choose a Full Detail?</h2>
+                        <p class="mb-4 leading-relaxed" data-i18n="sec1_p1">
+                            Daily driving takes a toll on your vehicle. Crumbs fall between the seats, coffee spills happen, and outside, your paint battles road salt, bug splatter, and UV rays. A quick vacuum and drive-thru wash simply aren't enough to maintain the value and comfort of your car.
+                        </p>
+                        <p class="leading-relaxed" data-i18n="sec1_p2">
+                            Our <strong>Full Detail Package</strong> is designed to be a comprehensive reset. By bundling our signature Interior Deep Clean with our Premium Exterior Wash & Wax, you receive top-tier protection and restoration for every surface of your car. It's the perfect service whether you just bought a used car, are preparing to sell your current one, or simply want to treat yourself to a pristine daily driver.
+                        </p>
+                    </div>
+
+                    <!-- Interior Process -->
+                    <div id="process" class="scroll-mt-32">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="ph-fill ph-steering-wheel text-3xl text-primary"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="int_title">Interior Deep Cleaning Process</h3>
+                        </div>
+                        
+                        <div class="space-y-6 pl-4 border-l-2 border-blue-100 dark:border-blue-900/50">
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="int_step1_title">Air Purge & Deep Vacuum</h4>
+                                <p class="leading-relaxed" data-i18n="int_step1_desc">We use compressed air to blow out dust and debris from tight crevices, vents, and under seats, followed by a thorough deep vacuuming of the entire cabin and trunk.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="int_step2_title">Shampoo & Hot Water Extraction</h4>
+                                <p class="leading-relaxed" data-i18n="int_step2_desc">Fabric seats and floor mats are agitated with specialized cleaners and extracted using a hot water extractor to pull out deep-set stains, spills, and hidden dirt.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="int_step3_title">Plastics, Vinyl & Leather Treatment</h4>
+                                <p class="leading-relaxed" data-i18n="int_step3_desc">All hard surfaces (dashboard, door panels, console) are cleaned with gentle brushes and steam. Leather seats are deeply cleaned and conditioned to restore a supple, non-greasy factory matte finish.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exterior Process -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="ph-fill ph-car-profile text-3xl text-primary"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="ext_title">Premium Exterior Process</h3>
+                        </div>
+                        
+                        <div class="space-y-6 pl-4 border-l-2 border-blue-100 dark:border-blue-900/50">
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="ext_step1_title">Wheels, Tires & Fenders</h4>
+                                <p class="leading-relaxed" data-i18n="ext_step1_desc">We begin by deep cleaning the wheel faces, inner barrels, tires, and fender wells using specialized iron removers and degreasers to remove baked-on brake dust.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="ext_step2_title">Snow Foam & Safe Hand Wash</h4>
+                                <p class="leading-relaxed" data-i18n="ext_step2_desc">The vehicle is blanketed in thick snow foam to safely lift loose dirt. We then perform a scratch-free two-bucket hand wash using premium microfiber mitts.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1 w-3 h-3 bg-primary rounded-full ring-4 ring-white dark:ring-darkBg"></div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="ext_step3_title">Ceramic Sealant & Tire Dressing</h4>
+                                <p class="leading-relaxed" data-i18n="ext_step3_desc">After a safe drying process, we apply a high-quality ceramic-infused spray sealant to the paint for months of gloss and protection. Tires are dressed to a perfect satin black.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sticky Sidebar Right -->
+                <div class="lg:col-span-1">
+                    <div class="glass-card p-6 rounded-3xl sticky top-28 border border-primary/20 dark:border-gray-700 shadow-xl">
+                        <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ph-bold ph-star text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="side_title">The Complete Package</h4>
+                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm" data-i18n="side_desc">Our most popular service. Inside and out, back to factory fresh.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100 dark:border-gray-800">
+                                <span class="font-semibold text-gray-700 dark:text-gray-300" data-i18n="side_price_label">Starting Price:</span>
+                                <span class="text-2xl font-bold text-primary">$249</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-2">
+                                <i class="ph ph-clock"></i> <span data-i18n="side_time">Estimated Time: 3.5 - 5 Hours</span>
+                            </div>
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 mt-4">
+                                <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-500 mt-0.5"></i> <span data-i18n="side_f1">Deep Interior Steam Clean</span></li>
+                                <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-500 mt-0.5"></i> <span data-i18n="side_f2">Upholstery / Carpet Extraction</span></li>
+                                <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-500 mt-0.5"></i> <span data-i18n="side_f3">Premium Foam Wash</span></li>
+                                <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-500 mt-0.5"></i> <span data-i18n="side_f4">Ceramic Paint Sealant</span></li>
+                            </ul>
+                        </div>
+
+                        <a href="index.html#booking" class="block w-full text-center bg-primary hover:bg-primaryHover text-white py-3 rounded-xl font-bold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
+                        <p class="text-center text-xs text-gray-400 mt-4" data-i18n="side_secure">Pricing varies by vehicle size and condition.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="ph ph-sparkle text-3xl text-primary"></i>
+                        <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6" data-i18n="ft_desc">Premium mobile car detailing serving Montreal, West Island (Pointe-Claire, DDO), Vaudreuil, St-Lazare, Laval, Mirabel, and Lachute. We bring the showroom to your driveway.</p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-tiktok-logo text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_links">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_link_packages">Packages</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition" data-i18n="ft_link_services">Services</a></li>
+                        <li><a href="areas-served.html" class="hover:text-primary transition" data-i18n="nav_locations">Locations</a></li>
+                        <li><a href="index.html#gallery" class="hover:text-primary transition" data-i18n="ft_link_gallery">Gallery</a></li>
+                        <li><a href="index.html#booking" class="hover:text-primary transition" data-i18n="ft_link_book">Book Online</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_services">Top Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="full-detail.html" class="hover:text-primary transition" data-i18n="ft_serv_full">Full Detail</a></li>
+                        <li><a href="interior-detailing.html" class="hover:text-primary transition" data-i18n="ft_serv_interior">Interior Deep Clean</a></li>
+                        <li><a href="exterior-detailing.html" class="hover:text-primary transition" data-i18n="ft_serv_exterior">Exterior Wash & Wax</a></li>
+                        <li><a href="paint-correction.html" class="hover:text-primary transition" data-i18n="ft_serv_paint">Paint Correction</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_contact">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-map-pin mt-1 text-primary"></i>
+                            <span data-i18n="ft_contact_loc">Mobile Service covering<br>Montreal, West Island, Laval, Vaudreuil & more</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-phone text-primary"></i>
+                            <span>(450) 560-8877</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-envelope text-primary"></i>
+                            <span>hello@sauvedetailing.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p data-i18n="ft_copy">&copy; 2026 Sauve Detailing. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. Theme Toggling ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // --- 2. Mobile Menu ---
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // --- 3. i18n Translation Logic (English / French) ---
+        let currentLang = 'en';
+
+        const dictionary = {
+            en: {
+                nav_packages: "Packages", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact Us", nav_book: "Book Now", nav_locations: "Locations",
+                hero_badge: "The Ultimate Reset", hero_title: "Complete Full <span class='gradient-text'>Detail</span>",
+                hero_desc: "Experience that \"new car feeling\" all over again. We combine our rigorous interior deep cleaning with a premium exterior wash and sealant to completely transform your vehicle from the inside out.",
+                btn_book: "Book Now", btn_learn: "Learn More",
+                
+                sec1_title: "Why Choose a Full Detail?",
+                sec1_p1: "Daily driving takes a toll on your vehicle. Crumbs fall between the seats, coffee spills happen, and outside, your paint battles road salt, bug splatter, and UV rays. A quick vacuum and drive-thru wash simply aren't enough to maintain the value and comfort of your car.",
+                sec1_p2: "Our <strong>Full Detail Package</strong> is designed to be a comprehensive reset. By bundling our signature Interior Deep Clean with our Premium Exterior Wash & Wax, you receive top-tier protection and restoration for every surface of your car. It's the perfect service whether you just bought a used car, are preparing to sell your current one, or simply want to treat yourself to a pristine daily driver.",
+                
+                int_title: "Interior Deep Cleaning Process",
+                int_step1_title: "Air Purge & Deep Vacuum", int_step1_desc: "We use compressed air to blow out dust and debris from tight crevices, vents, and under seats, followed by a thorough deep vacuuming of the entire cabin and trunk.",
+                int_step2_title: "Shampoo & Hot Water Extraction", int_step2_desc: "Fabric seats and floor mats are agitated with specialized cleaners and extracted using a hot water extractor to pull out deep-set stains, spills, and hidden dirt.",
+                int_step3_title: "Plastics, Vinyl & Leather Treatment", int_step3_desc: "All hard surfaces (dashboard, door panels, console) are cleaned with gentle brushes and steam. Leather seats are deeply cleaned and conditioned to restore a supple, non-greasy factory matte finish.",
+                
+                ext_title: "Premium Exterior Process",
+                ext_step1_title: "Wheels, Tires & Fenders", ext_step1_desc: "We begin by deep cleaning the wheel faces, inner barrels, tires, and fender wells using specialized iron removers and degreasers to remove baked-on brake dust.",
+                ext_step2_title: "Snow Foam & Safe Hand Wash", ext_step2_desc: "The vehicle is blanketed in thick snow foam to safely lift loose dirt. We then perform a scratch-free two-bucket hand wash using premium microfiber mitts.",
+                ext_step3_title: "Ceramic Sealant & Tire Dressing", ext_step3_desc: "After a safe drying process, we apply a high-quality ceramic-infused spray sealant to the paint for months of gloss and protection. Tires are dressed to a perfect satin black.",
+
+                side_title: "The Complete Package", side_desc: "Our most popular service. Inside and out, back to factory fresh.",
+                side_price_label: "Starting Price:", side_time: "Estimated Time: 3.5 - 5 Hours",
+                side_f1: "Deep Interior Steam Clean", side_f2: "Upholstery / Carpet Extraction", side_f3: "Premium Foam Wash", side_f4: "Ceramic Paint Sealant",
+                side_secure: "Pricing varies by vehicle size and condition.",
+
+                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us",
+                ft_desc: "Premium mobile car detailing serving Montreal, West Island (Pointe-Claire, DDO), Vaudreuil, St-Lazare, Laval, Mirabel, and Lachute. We bring the showroom to your driveway.",
+                ft_link_packages: "Packages", ft_link_services: "Services", ft_link_gallery: "Gallery", ft_link_book: "Book Online",
+                ft_serv_full: "Full Detail", ft_serv_interior: "Interior Deep Clean", ft_serv_exterior: "Exterior Wash & Wax", ft_serv_paint: "Paint Correction",
+                ft_contact_loc: "Mobile Service covering<br>Montreal, West Island, Laval, Vaudreuil & more",
+                ft_copy: "&copy; 2026 Sauve Detailing. All rights reserved.", ft_privacy: "Privacy Policy", ft_terms: "Terms of Service"
+            },
+            fr: {
+                nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver", nav_locations: "Secteurs",
+                hero_badge: "La Remise à Neuf Ultime", hero_title: "Esthétique <span class='gradient-text'>Complète</span>",
+                hero_desc: "Retrouvez la sensation du \"véhicule neuf\". Nous combinons notre nettoyage intérieur rigoureux en profondeur avec un lavage extérieur premium et un scellant pour transformer complètement votre véhicule, à l'intérieur comme à l'extérieur.",
+                btn_book: "Réserver", btn_learn: "En Savoir Plus",
+                
+                sec1_title: "Pourquoi Choisir un Forfait Complet ?",
+                sec1_p1: "La conduite quotidienne met votre véhicule à rude épreuve. Des miettes tombent entre les sièges, du café se renverse, et à l'extérieur, votre peinture subit le sel de voirie, les insectes et les rayons UV. Un coup d'aspirateur rapide et un passage au lave-auto ne suffisent tout simplement pas à maintenir la valeur et le confort de votre voiture.",
+                sec1_p2: "Notre <strong>Forfait Esthétique Complet</strong> est conçu pour être une remise à zéro complète. En combinant notre Nettoyage Intérieur en Profondeur signature avec notre Lavage et Cire Extérieur Premium, vous obtenez une protection et une restauration de premier ordre pour chaque surface de votre voiture. C'est le service parfait si vous venez d'acheter une voiture d'occasion, si vous vous préparez à vendre la vôtre, ou si vous voulez simplement vous offrir un véhicule impeccable au quotidien.",
+                
+                int_title: "Processus de Nettoyage Intérieur en Profondeur",
+                int_step1_title: "Purge à l'Air et Aspiration Profonde", int_step1_desc: "Nous utilisons de l'air comprimé pour souffler la poussière et les débris des crevasses étroites, des bouches d'aération et sous les sièges, suivi d'une aspiration minutieuse en profondeur de tout l'habitacle et du coffre.",
+                int_step2_title: "Shampoing et Extraction à l'Eau Chaude", int_step2_desc: "Les sièges en tissu et les tapis sont frottés avec des nettoyants spécialisés et extraits à l'aide d'un extracteur à eau chaude pour retirer les taches profondes, les liquides renversés et la saleté cachée.",
+                int_step3_title: "Traitement des Plastiques, Vinyles et Cuirs", int_step3_desc: "Toutes les surfaces dures (tableau de bord, panneaux de porte, console) sont nettoyées avec des brosses douces et de la vapeur. Les sièges en cuir sont nettoyés en profondeur et revitalisés pour restaurer une finition mate d'usine, souple et non grasse.",
+                
+                ext_title: "Processus Extérieur Premium",
+                ext_step1_title: "Roues, Pneus et Ailes", ext_step1_desc: "Nous commençons par nettoyer en profondeur les faces des roues, les barils intérieurs, les pneus et les passages de roues à l'aide de décontaminants ferreux spécialisés et de dégraissants pour enlever la poussière de frein incrustée.",
+                ext_step2_title: "Bain de Mousse et Lavage Sécuritaire à la Main", ext_step2_desc: "Le véhicule est recouvert d'une mousse épaisse pour soulever la saleté en toute sécurité. Nous effectuons ensuite un lavage à la main à deux seaux sans rayures en utilisant des gants en microfibre de qualité supérieure.",
+                ext_step3_title: "Scellant Céramique et Traitement des Pneus", ext_step3_desc: "Après un processus de séchage sécuritaire, nous appliquons un scellant en spray infusé de céramique de haute qualité sur la peinture pour des mois de brillance et de protection. Les pneus sont traités pour un noir satiné parfait.",
+
+                side_title: "Le Forfait Complet", side_desc: "Notre service le plus populaire. Intérieur et extérieur, comme à l'usine.",
+                side_price_label: "Prix de départ:", side_time: "Durée estimée : 3.5 - 5 Heures",
+                side_f1: "Nettoyage Vapeur Intérieur", side_f2: "Extraction Tapis / Tissus", side_f3: "Lavage Mousse Premium", side_f4: "Scellant Peinture Céramique",
+                side_secure: "Le prix varie selon la taille et l'état du véhicule.",
+
+                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous",
+                ft_desc: "Esthétique automobile mobile de premier choix desservant Montréal, l'Ouest-de-l'Île (Pointe-Claire, DDO), Vaudreuil, St-Lazare, Laval, Mirabel et Lachute. Nous apportons la salle de montre dans votre entrée.",
+                ft_link_packages: "Forfaits", ft_link_services: "Services", ft_link_gallery: "Galerie", ft_link_book: "Réserver en Ligne",
+                ft_serv_full: "Esthétique Complète", ft_serv_interior: "Nettoyage Intérieur en Profondeur", ft_serv_exterior: "Lavage & Cire Extérieur", ft_serv_paint: "Correction de Peinture",
+                ft_contact_loc: "Service mobile couvrant<br>Montréal, l'Ouest-de-l'Île, Laval, Vaudreuil et plus",
+                ft_copy: "&copy; 2026 Sauve Detailing. Tous droits réservés.", ft_privacy: "Politique de Confidentialité", ft_terms: "Conditions d'Utilisation"
+            }
+        };
+
+        function toggleLang() {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            
+            document.getElementById('langToggle').innerText = currentLang === 'en' ? 'FR' : 'EN';
+            document.getElementById('mobileLangToggle').innerText = currentLang === 'en' ? 'Switch to French' : 'Passer en Anglais';
+            
+            document.documentElement.lang = currentLang;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dictionary[currentLang][key]) {
+                    el.innerHTML = dictionary[currentLang][key]; 
+                }
+            });
+        }
+    </script>
+</body>
+</html>
