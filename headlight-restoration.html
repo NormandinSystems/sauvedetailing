@@ -98,18 +98,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <i class="ph ph-sparkle text-3xl text-primary"></i>
                     <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
-                </a>
+                </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#packages" class="hover:text-primary transition font-medium" data-i18n="nav_packages">Packages</a>
+                    <a href="#packages" class="hover:text-primary transition font-medium" data-i18n="nav_packages">Packages</a>
                     
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <a href="index.html#services" class="text-primary transition font-bold flex items-center gap-1 py-6">
+                        <a href="#services" class="hover:text-primary transition font-medium flex items-center gap-1 py-6">
                             <span data-i18n="nav_services">Services</span> <i class="ph-bold ph-caret-down text-xs mt-0.5"></i>
                         </a>
                         <div class="absolute top-full left-0 w-64 bg-white dark:bg-darkCard rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden -mt-2">
@@ -118,32 +118,28 @@
                                 <a href="exterior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Exterior Wash & Wax</a>
                                 <a href="paint-correction.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Paint Correction</a>
                                 <a href="ceramic-coating.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Ceramic Coating</a>
-                                <a href="headlight-restoration.html" class="block px-5 py-3 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 transition">Headlight Restoration</a>
+                                <a href="headlight-restoration.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Headlight Restoration</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="index.html#gallery" class="hover:text-primary transition font-medium" data-i18n="nav_gallery">Gallery</a>
+                    <a href="#gallery" class="hover:text-primary transition font-medium" data-i18n="nav_gallery">Gallery</a>
                     <a href="contact.html" class="hover:text-primary transition font-medium" data-i18n="nav_contact">Contact Us</a>
                     
                     <!-- Controls -->
                     <div class="flex items-center space-x-4 border-l border-gray-300 dark:border-gray-700 pl-4">
                         <button onclick="toggleLang()" class="font-bold hover:text-primary transition w-8 text-center" id="langToggle">FR</button>
                         <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
-                            <i class="ph ph-moon text-xl block dark:hidden"></i>
-                            <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                            <i class="ph ph-moon text-xl block dark:hidden" id="themeIconDark"></i>
+                            <i class="ph ph-sun text-xl hidden dark:block text-yellow-400" id="themeIconLight"></i>
                         </button>
                     </div>
 
-                    <a href="index.html#booking" class="bg-primary hover:bg-primaryHover text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
+                    <a href="#booking" class="bg-primary hover:bg-primaryHover text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">Book Now</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center space-x-4">
-                    <button onclick="toggleTheme()" class="p-2 rounded-full" aria-label="Toggle Theme">
-                        <i class="ph ph-moon text-xl block dark:hidden"></i>
-                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
-                    </button>
                     <button class="mobile-menu-button p-2 text-2xl">
                         <i class="ph ph-list"></i>
                     </button>
@@ -154,19 +150,24 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden mobile-menu bg-white dark:bg-darkCard border-b dark:border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="index.html#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
-                <a href="index.html#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
+                <a href="#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
+                <a href="#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
                 <div class="space-y-1 pl-4 border-l-2 border-gray-100 dark:border-gray-800 ml-4 mb-2">
                     <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Interior Detailing</a>
                     <a href="exterior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Exterior Wash & Wax</a>
                     <a href="paint-correction.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Paint Correction</a>
                     <a href="ceramic-coating.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ceramic Coating</a>
-                    <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-bold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg">Headlight Restoration</a>
+                    <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Headlight Restoration</a>
                 </div>
-                <a href="index.html#gallery" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_gallery">Gallery</a>
+                <a href="#gallery" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_gallery">Gallery</a>
                 <a href="contact.html" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_contact">Contact Us</a>
                 <button onclick="toggleLang()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" id="mobileLangToggle">Switch to French</button>
-                <a href="index.html#booking" class="block text-center mt-4 bg-primary text-white px-3 py-3 rounded-lg font-semibold" data-i18n="nav_book">Book Now</a>
+                <button onclick="toggleTheme()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center gap-2">
+                    <i class="ph ph-moon text-xl block dark:hidden"></i>
+                    <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    <span data-i18n="nav_theme">Toggle Theme</span>
+                </button>
+                <a href="#booking" class="block text-center mt-4 bg-primary text-white px-3 py-3 rounded-lg font-semibold" data-i18n="nav_book">Book Now</a>
             </div>
         </div>
     </nav>
