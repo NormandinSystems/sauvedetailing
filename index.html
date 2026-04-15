@@ -146,6 +146,11 @@
             display: none;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Lightbox Image Transition */
+        #lightboxImage {
+            transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300">
@@ -493,61 +498,80 @@
                 <h3 class="text-4xl font-extrabold" data-i18n="gal_title">Showroom Results</h3>
             </div>
 
-            <!-- CSS Grid Gallery -->
+            <!-- CSS Grid Gallery - Now with Lightbox Triggers -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_2240.jpeg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <!-- Gallery Item (Repeated) -->
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(0)">
+                    <img src="IMG_2240.jpeg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_2311.jpeg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(1)">
+                    <img src="IMG_2311.jpeg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_2314.jpeg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(2)">
+                    <img src="IMG_2314.jpeg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_2347.jpeg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(3)">
+                    <img src="IMG_2347.jpeg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_3399.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(4)">
+                    <img src="IMG_3399.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_3547.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(5)">
+                    <img src="IMG_3547.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_5705.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(6)">
+                    <img src="IMG_5705.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_5707.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(7)">
+                    <img src="IMG_5707.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_5897.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(8)">
+                    <img src="IMG_5897.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_5901.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(9)">
+                    <img src="IMG_5901.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
-                    <img src="IMG_5917.jpg" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(10)">
+                    <img src="IMG_5917.jpg" alt="Car detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(11)">
                     <img src="IMG_5968.jpg" alt="Clean car interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(12)">
                     <img src="IMG_5970.jpg" alt="Car polishing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(13)">
                     <img src="IMG_5976.jpg" alt="Car wash exterior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(14)">
                     <img src="IMG_6077.jpg" alt="Luxury car clean" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(15)">
                     <img src="IMG_6461.JPG" alt="Headlight detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(16)">
                     <img src="IMG_6683.jpg" alt="Car dashboard clean" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden group">
+                <div class="aspect-square rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openLightbox(17)">
                     <img src="IMG_7783.jpg" alt="Water beading wax" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"><i class="ph-bold ph-magnifying-glass-plus text-white text-4xl"></i></div>
                 </div>
             </div>
         </div>
@@ -826,6 +850,32 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal Overlay -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center backdrop-blur-md">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white z-50 p-2 transition">
+            <i class="ph ph-x text-3xl sm:text-4xl"></i>
+        </button>
+
+        <!-- Nav Arrows -->
+        <button onclick="changeLightboxImage(-1); event.stopPropagation();" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-50 p-2 sm:p-4 transition hover:scale-110">
+            <i class="ph ph-caret-left text-4xl sm:text-5xl drop-shadow-lg"></i>
+        </button>
+        <button onclick="changeLightboxImage(1); event.stopPropagation();" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-50 p-2 sm:p-4 transition hover:scale-110">
+            <i class="ph ph-caret-right text-4xl sm:text-5xl drop-shadow-lg"></i>
+        </button>
+
+        <!-- Image Container -->
+        <div class="relative w-full h-full flex items-center justify-center p-4 sm:p-16 overflow-hidden" id="lightboxContainer" onclick="handleLightboxClick(event)">
+            <img id="lightboxImage" src="" alt="Enlarged Gallery Image" class="max-w-full max-h-full object-contain cursor-zoom-in rounded-lg drop-shadow-2xl">
+        </div>
+        
+        <!-- Zoom Hint -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 text-sm pointer-events-none bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm transition-opacity duration-300" id="zoomHint" data-i18n="gal_zoom_hint">
+            Click image to zoom
+        </div>
+    </div>
+
     <!-- JavaScript Logic -->
     <script>
         // --- 1. Theme Toggling ---
@@ -908,7 +958,7 @@
         }
 
         function calculateTotal() {
-            // New pricing structure logic
+            // Pricing structure
             const pricingMatrix = {
                 'full': { 'regular': 220, 'large': 270 },
                 'exterior': { 'regular': 120, 'large': 160 },
@@ -931,12 +981,10 @@
             const sizeValue = sizeSelect.value;
             const sizeName = sizeSelect.options[sizeSelect.selectedIndex].getAttribute('data-name');
 
-            // Apply pricing from matrix if a package is selected
             if (pkgValue && pricingMatrix[pkgValue]) {
                 basePrice = pricingMatrix[pkgValue][sizeValue];
             }
 
-            // Get Add-ons sum
             let addonsSum = 0;
             let selectedAddons = [];
             const checks = document.querySelectorAll('.addon-check');
@@ -1013,7 +1061,118 @@
             }, 300);
         }
 
-        // --- 7. i18n Translation Logic (English / French) ---
+        // --- 7. Lightbox & Gallery Logic ---
+        let currentGalleryImages = [];
+        let currentLightboxIndex = 0;
+        let isZoomed = false;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gather all image sources from the gallery section
+            const galleryImages = document.querySelectorAll('#gallery img');
+            galleryImages.forEach(img => {
+                currentGalleryImages.push(img.src);
+            });
+            
+            // Add keyboard navigation for lightbox
+            document.addEventListener('keydown', (e) => {
+                const lightbox = document.getElementById('lightbox');
+                if (!lightbox.classList.contains('hidden')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                    if (e.key === 'ArrowRight') changeLightboxImage(1);
+                }
+            });
+        });
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImage');
+            
+            isZoomed = false;
+            updateZoomState();
+            
+            img.src = currentGalleryImages[index];
+            
+            lightbox.classList.remove('hidden');
+            // Small delay to allow display block to apply before transitioning opacity
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+            }, 10);
+            
+            // Lock body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+
+        function changeLightboxImage(direction) {
+            currentLightboxIndex += direction;
+            
+            // Handle wrap around
+            if (currentLightboxIndex < 0) currentLightboxIndex = currentGalleryImages.length - 1;
+            if (currentLightboxIndex >= currentGalleryImages.length) currentLightboxIndex = 0;
+            
+            isZoomed = false;
+            updateZoomState();
+            
+            const img = document.getElementById('lightboxImage');
+            img.src = currentGalleryImages[currentLightboxIndex];
+        }
+
+        function handleLightboxClick(event) {
+            const container = document.getElementById('lightboxContainer');
+            const img = document.getElementById('lightboxImage');
+            
+            // Click outside the image closes the lightbox
+            if (event.target === container) {
+                closeLightbox();
+                return;
+            }
+            
+            // Click on the image toggles zoom state
+            if (event.target === img) {
+                isZoomed = !isZoomed;
+                updateZoomState(event);
+            }
+        }
+
+        function updateZoomState(event) {
+            const img = document.getElementById('lightboxImage');
+            const hint = document.getElementById('zoomHint');
+            
+            if (isZoomed) {
+                // Zoom in exactly where the user clicked
+                if (event) {
+                    const rect = img.getBoundingClientRect();
+                    const xPercent = ((event.clientX - rect.left) / rect.width) * 100;
+                    const yPercent = ((event.clientY - rect.top) / rect.height) * 100;
+                    img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                }
+                
+                img.style.transform = 'scale(2.5)';
+                img.style.cursor = 'zoom-out';
+                hint.classList.add('opacity-0'); // Hide hint
+            } else {
+                // Reset to default
+                img.style.transform = 'scale(1)';
+                img.style.cursor = 'zoom-in';
+                img.style.transformOrigin = 'center center';
+                hint.classList.remove('opacity-0'); // Show hint
+            }
+        }
+
+        // --- 8. i18n Translation Logic (English / French) ---
         let currentLang = 'en';
 
         const dictionary = {
@@ -1061,7 +1220,7 @@
                 book_side_title: "Frictionless Scheduling", book_side_desc: "We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.",
                 trust_1_title: "Secure Payment", trust_1_desc: "Your data is encrypted and handled by industry-leading processors.",
                 trust_2_title: "We Travel To You", trust_2_desc: "Fully mobile setup requires only your keys.",
-                gal_sub: "Our Work", gal_title: "Showroom Results",
+                gal_sub: "Our Work", gal_title: "Showroom Results", gal_zoom_hint: "Click image to zoom",
                 area_sub: "Service Areas", area_title: "Greater Montreal Region", area_desc: "We bring our premium mobile detailing unit directly to your driveway, workplace, or condo across these major locations and their surrounding neighborhoods.",
                 ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
             },
@@ -1109,7 +1268,7 @@
                 book_side_title: "Planification Sans Friction", book_side_desc: "Nous avons intégré des flux de réservation transparents. Sélectionnez vos forfaits et bloquez votre plage horaire sur notre calendrier. Le paiement sécurisé est collecté lors de la réservation.",
                 trust_1_title: "Paiement Sécurisé", trust_1_desc: "Vos données sont cryptées et traitées par des leaders de l'industrie.",
                 trust_2_title: "Nous nous déplaçons", trust_2_desc: "L'installation mobile ne nécessite que vos clés.",
-                gal_sub: "Notre Travail", gal_title: "Résultats de Salle de Montre",
+                gal_sub: "Notre Travail", gal_title: "Résultats de Salle de Montre", gal_zoom_hint: "Cliquez sur l'image pour zoomer",
                 area_sub: "Zones Desservies", area_title: "Région du Grand Montréal", area_desc: "Nous apportons notre unité d'esthétique mobile premium directement dans votre entrée, lieu de travail ou condo à travers ces secteurs principaux et leurs quartiers environnants.",
                 ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous"
             }
