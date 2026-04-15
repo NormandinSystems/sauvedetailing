@@ -288,7 +288,7 @@
                         <div class="space-y-4 mb-6">
                             <div class="flex justify-between items-center pb-4 border-b border-gray-100 dark:border-gray-800">
                                 <span class="font-semibold text-gray-700 dark:text-gray-300" data-i18n="side_price_label">Starting Price:</span>
-                                <span class="text-2xl font-bold text-primary">$80</span>
+                                <span class="text-2xl font-bold text-primary">$60</span>
                             </div>
                             <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                                 <li class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="side_f1">Restores Both Headlights</span></li>
@@ -315,7 +315,7 @@
                         <i class="ph ph-sparkle text-3xl text-primary"></i>
                         <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
+                    <p class="text-gray-400 text-sm mb-6" data-i18n="ft_desc">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
                     <div class="flex gap-4">
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
@@ -326,20 +326,20 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_links">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Packages</a></li>
-                        <li><a href="index.html#services" class="hover:text-primary transition">Services</a></li>
-                        <li><a href="index.html#gallery" class="hover:text-primary transition">Gallery</a></li>
-                        <li><a href="index.html#booking" class="hover:text-primary transition">Book Online</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_link_packages">Packages</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition" data-i18n="ft_link_services">Services</a></li>
+                        <li><a href="index.html#gallery" class="hover:text-primary transition" data-i18n="ft_link_gallery">Gallery</a></li>
+                        <li><a href="index.html#booking" class="hover:text-primary transition" data-i18n="ft_link_book">Book Online</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_services">Top Services</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Full Detail</a></li>
-                        <li><a href="interior-detailing.html" class="hover:text-primary transition">Interior Deep Clean</a></li>
-                        <li><a href="exterior-detailing.html" class="hover:text-primary transition">Exterior Wash & Wax</a></li>
-                        <li><a href="index.html#packages" class="hover:text-primary transition">Maintenance Plan</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_ts_full">Full Detail</a></li>
+                        <li><a href="interior-detailing.html" class="hover:text-primary transition" data-i18n="ft_ts_interior">Interior Deep Clean</a></li>
+                        <li><a href="exterior-detailing.html" class="hover:text-primary transition" data-i18n="ft_ts_exterior">Exterior Wash & Wax</a></li>
+                        <li><a href="index.html#packages" class="hover:text-primary transition" data-i18n="ft_ts_maint">Maintenance Plan</a></li>
                     </ul>
                 </div>
 
@@ -348,7 +348,7 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex items-start gap-3">
                             <i class="ph-fill ph-map-pin mt-1 text-primary"></i>
-                            <span>Mobile Service based in<br>Montreal, QC</span>
+                            <span data-i18n="ft_address">Mobile Service based in<br>Montreal, QC</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ph-fill ph-phone text-primary"></i>
@@ -363,10 +363,10 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p>&copy; 2026 Sauve Detailing. All rights reserved.</p>
+                <p data-i18n="ft_copyright">&copy; 2026 Sauve Detailing. All rights reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="ft_terms">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -423,7 +423,14 @@
                 side_title: "Crystal Clear Optics", side_desc: "See the road safely again. Cheaper than replacing the entire headlight assembly.",
                 side_price_label: "Starting Price:", side_f1: "Restores Both Headlights", side_f2: "Includes UV Ceramic Sealant", side_f3: "Takes ~1 Hour On-Site", side_secure: "Mobile service. We bring the tools to you.",
 
-                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
+                // Footer Translations
+                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us",
+                ft_desc: "Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.",
+                ft_link_packages: "Packages", ft_link_services: "Services", ft_link_gallery: "Gallery", ft_link_book: "Book Online",
+                ft_ts_full: "Full Detail", ft_ts_interior: "Interior Deep Clean", ft_ts_exterior: "Exterior Wash & Wax", ft_ts_maint: "Maintenance Plan",
+                ft_address: "Mobile Service based in<br>Montreal, QC",
+                ft_copyright: "&copy; 2026 Sauve Detailing. All rights reserved.",
+                ft_privacy: "Privacy Policy", ft_terms: "Terms of Service"
             },
             fr: {
                 nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver",
@@ -449,7 +456,14 @@
                 side_title: "Optique Cristalline", side_desc: "Voyez la route en toute sécurité. Moins cher que de remplacer le bloc optique complet.",
                 side_price_label: "Prix de départ:", side_f1: "Restaure les Deux Phares", side_f2: "Inclut un Scellant UV Céramique", side_f3: "Prend ~1 Heure sur Place", side_secure: "Service mobile. Nous venons à vous avec l'équipement.",
 
-                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous"
+                // Footer Translations
+                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous",
+                ft_desc: "Esthétique automobile mobile de qualité supérieure desservant la grande région. Nous amenons la salle de montre dans votre entrée.",
+                ft_link_packages: "Forfaits", ft_link_services: "Services", ft_link_gallery: "Galerie", ft_link_book: "Réserver en ligne",
+                ft_ts_full: "Esthétique Complète", ft_ts_interior: "Nettoyage Intérieur en Profondeur", ft_ts_exterior: "Lavage et Cire Extérieurs", ft_ts_maint: "Plan d'Entretien",
+                ft_address: "Service mobile basé à<br>Montréal, QC",
+                ft_copyright: "&copy; 2026 Sauve Detailing. Tous droits réservés.",
+                ft_privacy: "Politique de Confidentialité", ft_terms: "Conditions d'Utilisation"
             }
         };
 
