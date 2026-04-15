@@ -156,8 +156,6 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <!-- To add a custom logo image, uncomment the img tag below and remove the icon/text span -->
-                    <!-- <img src="your-logo.png" alt="Sauve Detailing Logo" class="h-10 w-auto"> -->
                     <i class="ph ph-sparkle text-3xl text-primary"></i>
                     <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
                 </div>
@@ -171,7 +169,6 @@
                         <a href="#services" class="hover:text-primary transition font-medium flex items-center gap-1 py-6">
                             <span data-i18n="nav_services">Services</span> <i class="ph-bold ph-caret-down text-xs mt-0.5"></i>
                         </a>
-                        <!-- Dropdown panel -->
                         <div class="absolute top-full left-0 w-64 bg-white dark:bg-darkCard rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden -mt-2">
                             <div class="py-2">
                                 <a href="interior-detailing.html" class="block px-5 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition">Interior Detailing</a>
@@ -200,10 +197,6 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center space-x-4">
-                    <button onclick="toggleTheme()" class="p-2 rounded-full" aria-label="Toggle Theme">
-                        <i class="ph ph-moon text-xl block dark:hidden"></i>
-                        <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
-                    </button>
                     <button class="mobile-menu-button p-2 text-2xl">
                         <i class="ph ph-list"></i>
                     </button>
@@ -215,8 +208,6 @@
         <div class="md:hidden hidden mobile-menu bg-white dark:bg-darkCard border-b dark:border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="#packages" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_packages">Packages</a>
-                
-                <!-- Mobile Services Dropdown -->
                 <a href="#services" class="block px-3 py-2 font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-between" data-i18n="nav_services">Services</a>
                 <div class="space-y-1 pl-4 border-l-2 border-gray-100 dark:border-gray-800 ml-4 mb-2">
                     <a href="interior-detailing.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Interior Detailing</a>
@@ -225,10 +216,14 @@
                     <a href="ceramic-coating.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ceramic Coating</a>
                     <a href="headlight-restoration.html" class="block px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Headlight Restoration</a>
                 </div>
-
                 <a href="#gallery" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_gallery">Gallery</a>
                 <a href="contact.html" class="block px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="nav_contact">Contact Us</a>
                 <button onclick="toggleLang()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" id="mobileLangToggle">Switch to French</button>
+                <button onclick="toggleTheme()" class="w-full text-left px-3 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center gap-2">
+                    <i class="ph ph-moon text-xl block dark:hidden"></i>
+                    <i class="ph ph-sun text-xl hidden dark:block text-yellow-400"></i>
+                    <span data-i18n="nav_theme">Toggle Theme</span>
+                </button>
                 <a href="#booking" class="block text-center mt-4 bg-primary text-white px-3 py-3 rounded-lg font-semibold" data-i18n="nav_book">Book Now</a>
             </div>
         </div>
@@ -238,11 +233,9 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Video Background -->
         <div class="absolute inset-0 w-full h-full bg-black">
-            <!-- Using a reliable high-quality car video placeholder -->
             <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-washing-a-black-car-with-a-sponge-2868-large.mp4" type="video/mp4">
             </video>
-            <!-- Fallback overlay to ensure text readability -->
             <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-darkBg"></div>
         </div>
 
@@ -265,7 +258,6 @@
             </div>
         </div>
         
-        <!-- Scroll indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden md:block">
             <a href="#features" class="text-white/50 hover:text-white transition">
                 <i class="ph ph-caret-down text-3xl"></i>
@@ -316,7 +308,7 @@
                     <div class="mb-6">
                         <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_ext_title">Exterior Detail</h4>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
-                        <div class="text-4xl font-extrabold text-primary mb-6">$75</div>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$120</div>
                         <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f1">Detailed Hand Wash</span></li>
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="ext_f2">Rims & Tire</span></li>
@@ -333,7 +325,7 @@
                     <div class="mb-6">
                         <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_full_title">Full Detail</h4>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
-                        <div class="text-4xl font-extrabold text-primary mb-6">$150</div>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$220</div>
                         <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f1">Full Interior Detail</span></li>
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="full_f2">Full Exterior Detail</span></li>
@@ -349,7 +341,7 @@
                     <div class="mb-6">
                         <h4 class="text-2xl font-bold mb-2" data-i18n="pkg_int_title">Interior Detail</h4>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="pkg_starts">Starts From</p>
-                        <div class="text-4xl font-extrabold text-primary mb-6">$98</div>
+                        <div class="text-4xl font-extrabold text-primary mb-6">$150</div>
                         <ul class="space-y-3 mb-8 flex-grow text-gray-700 dark:text-gray-300">
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f1">Vacuum</span></li>
                             <li class="flex items-center gap-3"><i class="ph-bold ph-check text-green-500"></i> <span data-i18n="int_f2">Steam Clean</span></li>
@@ -419,7 +411,7 @@
                             <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_vac">Vacuum</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_vac_desc">Powerful vacuum removes deep dirt, leaving interiors spotless.</p></div>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
-                            <i class="ph-fill ph-hand-swipe text-3xl text-primary flex-shrink-0"></i>
+                            <i class="ph-fill ph-sparkle text-3xl text-primary flex-shrink-0"></i>
                             <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_wipe">Full Wipe Down</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_wipe_desc">Thoroughly clean all interior surfaces and panels.</p></div>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
@@ -463,24 +455,28 @@
                 <div id="addons-tab" class="tab-content col-start-1 row-start-1 opacity-0 pointer-events-none z-0 transition-opacity duration-500">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-drop text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_seat">Seat Shampoo</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_seat_desc">Shampoo seats, removing stains and odors.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-baby text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_kids">Kids Car Seat</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_kids_desc">Deep cleaning and sanitization of children's car seats.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
                             <i class="ph-fill ph-paw-print text-3xl text-primary flex-shrink-0"></i>
                             <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_pet">Pet Hair Removal</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_pet_desc">Removes embedded pet hair from all interior surfaces.</p></div>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
-                            <i class="ph-fill ph-paint-roller text-3xl text-primary flex-shrink-0"></i>
-                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_trim">Trim Restoration</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_trim_desc">Restores faded trim to like-new condition.</p></div>
-                        </div>
-                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
                             <i class="ph-fill ph-rug text-3xl text-primary flex-shrink-0"></i>
-                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_carpet">Carpet Shampoo</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_carpet_desc">Deep cleans carpets, removing stains and odors.</p></div>
-                        </div>
-                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
-                            <i class="ph-fill ph-eraser text-3xl text-primary flex-shrink-0"></i>
-                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_clay">Clay Bar Treatment</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_clay_desc">Removes surface contaminants for smooth, clean paint.</p></div>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_floormats">Floor Mats Shampoo</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_floormats_desc">Deep clean and extraction for floor mats.</p></div>
                         </div>
                         <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
                             <i class="ph-fill ph-snowflake text-3xl text-primary flex-shrink-0"></i>
                             <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_salt">Salt Stain Removal</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_salt_desc">Salt stains are ugly, we make your mats look fresh again.</p></div>
+                        </div>
+                        <div class="p-6 glass-card rounded-2xl border border-gray-100 dark:border-gray-800 flex gap-4">
+                            <i class="ph-fill ph-lightbulb text-3xl text-primary flex-shrink-0"></i>
+                            <div><h4 class="font-bold text-lg mb-1" data-i18n="srv_headlight">Headlight Restoration</h4><p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="srv_headlight_desc">Restores clarity to yellowed or foggy headlights.</p></div>
                         </div>
                     </div>
                 </div>
@@ -499,7 +495,6 @@
 
             <!-- CSS Grid Gallery -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
-                <!-- Using placeholder images that look premium -->
                 <div class="aspect-square rounded-2xl overflow-hidden group">
                     <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=800" alt="Car wheel detailing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
@@ -542,40 +537,29 @@
             <!-- Cities Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Montreal</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Montreal, QC</span>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Laval</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> 
+                    <div>
+                        <span class="font-semibold block">West Island, QC</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400">Pointe-Claire, DDO, etc.</span>
+                    </div>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Longueuil</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Vaudreuil, QC</span>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Brossard</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">St-Lazare, QC</span>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">West Island</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Laval, QC</span>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Boucherville</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Mirabel, QC</span>
                 </div>
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Terrebonne</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Repentigny</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Blainville</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Saint-Jérôme</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Vaudreuil-Dorion</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Châteauguay</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Lachute, QC</span>
                 </div>
             </div>
         </div>
@@ -602,28 +586,28 @@
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step1">1. Select Package</label>
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="col-span-2">
-                                    <input type="radio" name="package" id="pkg_full" value="150" data-name="Full Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_full" value="full" data-name="Full Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_full" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition relative">
                                         <span class="absolute top-2 right-2 flex h-3 w-3">
                                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                                           <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
                                         </span>
                                         <div class="font-bold text-lg text-gray-800 dark:text-white" data-i18n="pkg_full_title">Full Detail</div>
-                                        <div class="text-primary text-sm font-bold mt-1">$150</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$220</div>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="package" id="pkg_ext" value="75" data-name="Exterior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_ext" value="exterior" data-name="Exterior Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_ext" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                                         <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_ext_title">Exterior Detail</div>
-                                        <div class="text-primary text-sm font-bold mt-1">$75</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$120</div>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="package" id="pkg_int" value="98" data-name="Interior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_int" value="interior" data-name="Interior Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_int" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                                         <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_int_title">Interior Detail</div>
-                                        <div class="text-primary text-sm font-bold mt-1">$98</div>
+                                        <div class="text-primary text-sm font-bold mt-1">$150</div>
                                     </label>
                                 </div>
                             </div>
@@ -633,9 +617,8 @@
                         <div class="mb-8">
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step2">2. Vehicle Size</label>
                             <select id="vehicleSize" onchange="calculateTotal()" class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition appearance-none shadow-sm">
-                                <option value="1" data-name="Coupe / Sedan" data-i18n="size_small">Coupe / Sedan (Base Price)</option>
-                                <option value="1.2" data-name="Small SUV" data-i18n="size_med">Small SUV / Crossover (+20%)</option>
-                                <option value="1.4" data-name="Large SUV" data-i18n="size_large">Large SUV / Truck / Van (+40%)</option>
+                                <option value="regular" data-name="Sedan & SUV" data-i18n="size_small">Sedan & SUV (Base Price)</option>
+                                <option value="large" data-name="Vans, 3 Rows & Trucks" data-i18n="size_large">Vans, 3 Rows & Trucks (+$40-$50)</option>
                             </select>
                         </div>
 
@@ -644,24 +627,28 @@
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step3">3. Customize (Add-ons)</label>
                             <div class="grid grid-cols-2 gap-3">
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="30" data-name="Pet Hair">
-                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_pet">Pet Hair</span> <span class="text-gray-500 dark:text-gray-400">(+$30)</span></span>
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="50" data-name="Seat Shampoo">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_seat">Seat Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$50)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="40" data-name="Carpet Shampoo">
-                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_carpet">Carpet Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$40)</span></span>
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Kids Car Seat">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_kids">Kids Car Seat</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="40" data-name="Seat Shampoo">
-                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_seat">Seat Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$40)</span></span>
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="35" data-name="Pet Hair">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_pet">Pet Hair</span> <span class="text-gray-500 dark:text-gray-400">(+$35)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Salt Stain">
-                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_salt">Salt Stain</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Floor Mats Shampoo">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_floormats">Floor Mats Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="35" data-name="Trim Restoration">
-                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_trim">Trim Restoration</span> <span class="text-gray-500 dark:text-gray-400">(+$35)</span></span>
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="30" data-name="Salt Stain">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_salt">Salt Removal</span> <span class="text-gray-500 dark:text-gray-400">(+$30)</span></span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
+                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="60" data-name="Headlight Restoration">
+                                    <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_headlight">Headlight Restoration</span> <span class="text-gray-500 dark:text-gray-400">(+$60)</span></span>
                                 </label>
                             </div>
                         </div>
@@ -681,6 +668,10 @@
                                 </button>
                             </div>
                         </div>
+                        
+                        <!-- Disclaimer text -->
+                        <p class="text-xs text-gray-500 mt-4 text-center sm:text-left italic" data-i18n="calc_disclaimer">* Price is subject to change if your vehicle's condition is significantly worse than expected.</p>
+
                     </form>
                 </div>
 
@@ -853,36 +844,32 @@
 
         // --- 4. Tabs Logic ---
         function switchTab(tabId) {
-            // Hide all contents
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('opacity-100', 'pointer-events-auto', 'z-10');
                 content.classList.add('opacity-0', 'pointer-events-none', 'z-0');
             });
-            // Reset all buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = 'tab-btn px-6 py-3 rounded-full font-bold bg-gray-100 dark:bg-darkCard text-gray-500 hover:text-primary transition';
             });
 
-            // Show selected content
             const activeContent = document.getElementById(tabId);
             activeContent.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
             activeContent.classList.add('opacity-100', 'pointer-events-auto', 'z-10');
 
-            // Highlight button
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.className = 'tab-btn px-6 py-3 rounded-full font-bold bg-primary text-white shadow-lg shadow-blue-500/30 transition';
         }
 
 
         // --- 5. Calculator Logic ---
-        let currentBookingData = {}; // Store the current selection
+        let currentBookingData = {};
 
         function selectPackage(pkgStr) {
             let id = '';
             if(pkgStr === 'exterior') id = 'pkg_ext';
             if(pkgStr === 'interior') id = 'pkg_int';
             if(pkgStr === 'full') id = 'pkg_full';
-            if(pkgStr === 'maintenance') id = 'pkg_full'; // fallback for UI calc demo
+            if(pkgStr === 'maintenance') id = 'pkg_full';
             
             if(document.getElementById(id)) {
                 document.getElementById(id).checked = true;
@@ -891,21 +878,33 @@
         }
 
         function calculateTotal() {
-            // Get base package price
+            // New pricing structure logic
+            const pricingMatrix = {
+                'full': { 'regular': 220, 'large': 270 },
+                'exterior': { 'regular': 120, 'large': 160 },
+                'interior': { 'regular': 150, 'large': 190 }
+            };
+
             let basePrice = 0;
             let packageName = 'No Package Selected';
+            let pkgValue = '';
+            
             const radios = document.querySelectorAll('input[name="package"]');
             radios.forEach(radio => {
                 if (radio.checked) {
-                    basePrice = parseFloat(radio.value);
+                    pkgValue = radio.value;
                     packageName = radio.getAttribute('data-name');
                 }
             });
 
-            // Get size multiplier
             const sizeSelect = document.getElementById('vehicleSize');
-            const sizeMultiplier = parseFloat(sizeSelect.value);
+            const sizeValue = sizeSelect.value;
             const sizeName = sizeSelect.options[sizeSelect.selectedIndex].getAttribute('data-name');
+
+            // Apply pricing from matrix if a package is selected
+            if (pkgValue && pricingMatrix[pkgValue]) {
+                basePrice = pricingMatrix[pkgValue][sizeValue];
+            }
 
             // Get Add-ons sum
             let addonsSum = 0;
@@ -918,10 +917,8 @@
                 }
             });
 
-            // Calculate final
-            const total = (basePrice * sizeMultiplier) + addonsSum;
+            const total = basePrice + addonsSum;
 
-            // Save state for checkout
             currentBookingData = {
                 package: packageName,
                 vehicleSize: sizeName,
@@ -929,14 +926,11 @@
                 total: '$' + total.toFixed(2)
             };
 
-            // Animate number change (simple version)
             document.getElementById('grandTotal').innerText = currentBookingData.total;
         }
 
-        // Initialize calculator on load
         calculateTotal();
 
-        // Add event listeners to addons manually to ensure updates when clicked
         document.querySelectorAll('.addon-check').forEach(check => {
             check.addEventListener('change', calculateTotal);
         });
@@ -945,7 +939,6 @@
         function initiateCheckout() {
             const btnCalText = document.querySelector('button[onclick="initiateCheckout()"] span');
             const loaderCal = document.getElementById('loaderCal');
-            
             const modal = document.getElementById('checkoutModal');
             const modalContent = document.getElementById('modalContent');
             const modalTitle = document.getElementById('modalTitle');
@@ -953,26 +946,20 @@
             const modalIcon = document.getElementById('modalIcon');
             const modalData = document.getElementById('modalData');
 
-            // Show Loading state on button
             btnCalText.style.display = 'none';
             loaderCal.style.display = 'block';
 
-            // Simulate API Call delay
             setTimeout(() => {
-                // Reset buttons
                 btnCalText.style.display = 'block';
                 loaderCal.style.display = 'none';
 
-                // Display captured data string (This simulates how we pass it to URL params)
                 const dataString = `Package: ${currentBookingData.package}\nSize: ${currentBookingData.vehicleSize}\nAdd-ons: ${currentBookingData.addons}\nTotal: ${currentBookingData.total}`;
                 modalData.innerText = dataString;
 
-                // Setup Modal
                 modalIcon.className = "ph-fill ph-calendar-check text-6xl text-primary mb-4";
                 modalTitle.innerText = "Connecting Booking System";
                 modalDesc.innerText = "In production, this passes data to your calendar booking and payment link seamlessly.";
 
-                // Show Modal
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
                 setTimeout(() => {
@@ -1001,7 +988,7 @@
 
         const dictionary = {
             en: {
-                nav_packages: "Packages", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact Us", nav_book: "Book Now",
+                nav_packages: "Packages", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact Us", nav_book: "Book Now", nav_theme: "Toggle Theme",
                 hero_badge: "Premium Mobile Service", hero_title1: "Showroom Finish,", hero_title2: "Delivered to You.",
                 hero_subtitle: "Frictionless online booking, premium products, and expert techniques. Choose your package and let us handle the rest.",
                 hero_cta1: "Book Instantly", hero_cta2: "View Packages",
@@ -1017,6 +1004,9 @@
                 srv_sub: "The Details", srv_title: "Comprehensive Services",
                 tab_exterior: "Exterior Detail", tab_interior: "Interior Detail", tab_addons: "Add Ons",
                 srv_seat: "Seat Shampoo", srv_seat_desc: "Shampoo seats, removing stains and odors.",
+                srv_kids: "Kids Car Seat", srv_kids_desc: "Deep cleaning and sanitization of children's car seats.",
+                srv_floormats: "Floor Mats Shampoo", srv_floormats_desc: "Deep clean and extraction for floor mats.",
+                srv_headlight: "Headlight Restoration", srv_headlight_desc: "Restores clarity to yellowed or foggy headlights.",
                 srv_steam: "Steam Clean", srv_steam_desc: "High-heat steam lifts dirt and disinfects surfaces thoroughly.",
                 srv_air: "Air Compressor", srv_air_desc: "Blasts dust and debris from hard-to-reach areas.",
                 srv_vac: "Vacuum", srv_vac_desc: "Powerful vacuum removes deep dirt, leaving interiors spotless.",
@@ -1032,11 +1022,12 @@
                 srv_trim: "Trim Restoration", srv_trim_desc: "Restores faded trim to like-new condition.",
                 srv_carpet: "Carpet Shampoo", srv_carpet_desc: "Deep cleans carpets, removing stains and odors.",
                 srv_clay: "Clay Bar Treatment", srv_clay_desc: "Removes surface contaminants for smooth, clean paint.",
-                srv_salt: "Salt Stain Removal", srv_salt_desc: "Salt stains are ugly, we make your mats look fresh again.",
+                srv_salt: "Salt Removal", srv_salt_desc: "Salt stains are ugly, we make your mats look fresh again.",
                 calc_title: "Book Your Service", calc_desc: "Configure your detail and book a date instantly.",
                 calc_step1: "1. Select Package", calc_step2: "2. Vehicle Size", calc_step3: "3. Customize (Add-ons)",
-                size_small: "Coupe / Sedan (Base Price)", size_med: "Small SUV / Crossover (+20%)", size_large: "Large SUV / Truck / Van (+40%)",
+                size_small: "Sedan & SUV (Base Price)", size_med: "Small SUV / Crossover (+20%)", size_large: "Vans, 3 Rows & Trucks (+$40-$50)",
                 calc_total_est: "Estimated Total", btn_book_cal: "Schedule Booking",
+                calc_disclaimer: "* Price is subject to change if your vehicle's condition is significantly worse than expected.",
                 book_side_title: "Frictionless Scheduling", book_side_desc: "We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.",
                 trust_1_title: "Secure Payment", trust_1_desc: "Your data is encrypted and handled by industry-leading processors.",
                 trust_2_title: "We Travel To You", trust_2_desc: "Fully mobile setup requires only your keys.",
@@ -1045,7 +1036,7 @@
                 ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
             },
             fr: {
-                nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver",
+                nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver", nav_theme: "Changer de thème",
                 hero_badge: "Service Mobile Premium", hero_title1: "Finition de salle de montre,", hero_title2: "Livrée chez vous.",
                 hero_subtitle: "Réservation en ligne sans friction, produits premium et techniques expertes. Choisissez votre forfait, on s'occupe du reste.",
                 hero_cta1: "Réserver Instantanément", hero_cta2: "Voir les Forfaits",
@@ -1061,6 +1052,9 @@
                 srv_sub: "Les Détails", srv_title: "Services Complets",
                 tab_exterior: "Extérieur", tab_interior: "Intérieur", tab_addons: "Suppléments",
                 srv_seat: "Shampoing des Sièges", srv_seat_desc: "Nettoie les sièges, enlève les taches et odeurs.",
+                srv_kids: "Siège d'auto pour enfant", srv_kids_desc: "Nettoyage en profondeur et désinfection du siège d'auto.",
+                srv_floormats: "Shampoing des Tapis", srv_floormats_desc: "Nettoyage en profondeur et extraction des tapis.",
+                srv_headlight: "Restauration des phares", srv_headlight_desc: "Restaure la clarté des phares jaunis ou brouillés.",
                 srv_steam: "Nettoyage Vapeur", srv_steam_desc: "La vapeur à haute chaleur désinfecte et déloge la saleté.",
                 srv_air: "Compresseur d'Air", srv_air_desc: "Souffle la poussière des endroits difficiles d'accès.",
                 srv_vac: "Aspirateur", srv_vac_desc: "Enlève la saleté incrustée, laissant un intérieur impeccable.",
@@ -1079,8 +1073,9 @@
                 srv_salt: "Enlèvement de Sel", srv_salt_desc: "Les taches de sel sont laides, nous rafraîchissons vos tapis.",
                 calc_title: "Réservez Votre Service", calc_desc: "Configurez votre esthétique et réservez une date instantanément.",
                 calc_step1: "1. Sélectionner un Forfait", calc_step2: "2. Taille du Véhicule", calc_step3: "3. Personnaliser (Suppléments)",
-                size_small: "Coupé / Berline (Prix de Base)", size_med: "Petit VUS / Multisegment (+20%)", size_large: "Grand VUS / Camion / Fourgonnette (+40%)",
+                size_small: "Berline & VUS (Prix de base)", size_med: "Petit VUS / Multisegment (+20%)", size_large: "Fourgonnettes, 3 rangées & Camions (+$40-$50)",
                 calc_total_est: "Total Estimé", btn_book_cal: "Planifier la Réservation",
+                calc_disclaimer: "* Le prix est sujet à changement si l'état de votre véhicule est considérablement pire que prévu.",
                 book_side_title: "Planification Sans Friction", book_side_desc: "Nous avons intégré des flux de réservation transparents. Sélectionnez vos forfaits et bloquez votre plage horaire sur notre calendrier. Le paiement sécurisé est collecté lors de la réservation.",
                 trust_1_title: "Paiement Sécurisé", trust_1_desc: "Vos données sont cryptées et traitées par des leaders de l'industrie.",
                 trust_2_title: "Nous nous déplaçons", trust_2_desc: "L'installation mobile ne nécessite que vos clés.",
@@ -1093,18 +1088,15 @@
         function toggleLang() {
             currentLang = currentLang === 'en' ? 'fr' : 'en';
             
-            // Update toggle buttons text
             document.getElementById('langToggle').innerText = currentLang === 'en' ? 'FR' : 'EN';
             document.getElementById('mobileLangToggle').innerText = currentLang === 'en' ? 'Switch to French' : 'Passer en Anglais';
             
-            // Change document language
             document.documentElement.lang = currentLang;
 
-            // Translate all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dictionary[currentLang][key]) {
-                    el.innerHTML = dictionary[currentLang][key]; // Using innerHTML in case of <span> tags
+                    el.innerHTML = dictionary[currentLang][key];
                 }
             });
         }
