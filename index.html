@@ -134,18 +134,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Loader for booking mock */
-        .loader {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #3b82f6;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
-            display: none;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
         /* Lightbox Image Transition */
         #lightboxImage {
@@ -160,9 +148,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <i class="ph ph-sparkle text-3xl text-primary"></i>
-                    <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="logo.png" alt="Sauve Detailing" class="h-10 md:h-12 w-auto">
                 </div>
 
                 <!-- Desktop Menu -->
@@ -593,39 +580,13 @@
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
                     <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Montreal, QC</span>
                 </div>
-                
-                <!-- Expanded West Island Cities -->
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Pointe-Claire, QC</span>
+                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> 
+                    <div>
+                        <span class="font-semibold block">West Island, QC</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400">Pointe-Claire, DDO, etc.</span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Dollard-des-Ormeaux, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Kirkland, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Beaconsfield, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Dorval, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Pierrefonds, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Baie-D'Urfé, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Sainte-Anne-de-Bellevue, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Senneville, QC</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                    <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">L'Île-Bizard, QC</span>
-                </div>
-
                 <div class="flex items-center gap-3 p-4 glass-card rounded-xl border border-gray-200 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
                     <i class="ph-fill ph-map-pin text-primary text-xl"></i> <span class="font-semibold">Vaudreuil, QC</span>
                 </div>
@@ -654,19 +615,19 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 
-                <!-- Calculator Form -->
+                <!-- Netlify Ready Contact/Booking Form -->
                 <div class="bg-white dark:bg-gray-800/50 backdrop-blur-xl border border-gray-200 dark:border-gray-700 p-8 rounded-3xl reveal shadow-xl dark:shadow-none">
                     <h3 class="text-3xl font-bold mb-2" data-i18n="calc_title">Book Your Service</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-8" data-i18n="calc_desc">Configure your detail and book a date instantly.</p>
+                    <p class="text-gray-500 dark:text-gray-400 mb-8" data-i18n="calc_desc">Configure your detail and send a booking request.</p>
 
-                    <form id="bookingForm" onsubmit="event.preventDefault();">
+                    <form id="bookingForm" name="booking" method="POST" data-netlify="true">
                         
                         <!-- Step 1: Package -->
                         <div class="mb-8">
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step1">1. Select Package</label>
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="col-span-2">
-                                    <input type="radio" name="package" id="pkg_full" value="full" data-name="Full Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_full" value="Full Detail" data-name="Full Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_full" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition relative">
                                         <span class="absolute top-2 right-2 flex h-3 w-3">
                                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -677,14 +638,14 @@
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="package" id="pkg_ext" value="exterior" data-name="Exterior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_ext" value="Exterior Detail" data-name="Exterior Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_ext" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                                         <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_ext_title">Exterior Detail</div>
                                         <div class="text-primary text-sm font-bold mt-1">$120</div>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="package" id="pkg_int" value="interior" data-name="Interior Detail" class="calc-radio hidden" onchange="calculateTotal()">
+                                    <input type="radio" name="package" id="pkg_int" value="Interior Detail" data-name="Interior Detail" class="calc-radio hidden" onchange="calculateTotal()">
                                     <label for="pkg_int" class="block border border-gray-200 dark:border-gray-600 rounded-xl p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                                         <div class="font-bold text-gray-800 dark:text-white" data-i18n="pkg_int_title">Interior Detail</div>
                                         <div class="text-primary text-sm font-bold mt-1">$150</div>
@@ -696,7 +657,7 @@
                         <!-- Step 2: Vehicle Size -->
                         <div class="mb-8">
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step2">2. Vehicle Size</label>
-                            <select id="vehicleSize" onchange="calculateTotal()" class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition appearance-none shadow-sm">
+                            <select id="vehicleSize" name="vehicleSize" onchange="calculateTotal()" class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition appearance-none shadow-sm">
                                 <option value="regular" data-name="Sedan & SUV" data-i18n="size_small">Sedan & SUV (Base Price)</option>
                                 <option value="large" data-name="Vans, 3 Rows & Trucks" data-i18n="size_large">Vans, 3 Rows & Trucks (+$40-$50)</option>
                             </select>
@@ -707,31 +668,58 @@
                             <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step3">3. Customize (Add-ons)</label>
                             <div class="grid grid-cols-2 gap-3">
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="50" data-name="Seat Shampoo">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Seat Shampoo" data-price="50" data-name="Seat Shampoo">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_seat">Seat Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$50)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Kids Car Seat">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Kids Car Seat" data-price="25" data-name="Kids Car Seat">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_kids">Kids Car Seat</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="35" data-name="Pet Hair">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Pet Hair" data-price="35" data-name="Pet Hair">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_pet">Pet Hair</span> <span class="text-gray-500 dark:text-gray-400">(+$35)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="25" data-name="Floor Mats Shampoo">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Floor Mats Shampoo" data-price="25" data-name="Floor Mats Shampoo">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_floormats">Floor Mats Shampoo</span> <span class="text-gray-500 dark:text-gray-400">(+$25)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="30" data-name="Salt Stain">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Salt Stain" data-price="30" data-name="Salt Stain">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_salt">Salt Removal</span> <span class="text-gray-500 dark:text-gray-400">(+$30)</span></span>
                                 </label>
                                 <label class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition bg-white dark:bg-transparent">
-                                    <input type="checkbox" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="60" data-name="Headlight Restoration">
+                                    <input type="checkbox" name="addons[]" class="addon-check w-5 h-5 accent-primary rounded border-gray-300 dark:bg-gray-800" value="Headlight Restoration" data-price="60" data-name="Headlight Restoration">
                                     <span class="text-sm text-gray-800 dark:text-white"><span data-i18n="srv_headlight">Headlight Restoration</span> <span class="text-gray-500 dark:text-gray-400">(+$60)</span></span>
                                 </label>
                             </div>
                         </div>
+
+                        <!-- Step 4: Contact Information -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step4">4. Your Details</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <input type="text" name="name" required class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition shadow-sm" placeholder="Full Name" data-i18n-placeholder="label_name">
+                                </div>
+                                <div>
+                                    <input type="tel" name="phone" required class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition shadow-sm" placeholder="Phone Number" data-i18n-placeholder="label_phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Timeline -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-4" data-i18n="calc_step5">5. When would you like this done?</label>
+                            <select name="timeline" required class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl px-4 py-3 outline-none focus:border-primary transition appearance-none shadow-sm">
+                                <option value="" disabled selected data-i18n="time_select">Select a timeline...</option>
+                                <option value="ASAP" data-i18n="time_asap">ASAP</option>
+                                <option value="This Week" data-i18n="time_this_week">This week</option>
+                                <option value="Next Week" data-i18n="time_next_week">Next week</option>
+                            </select>
+                        </div>
+
+                        <!-- Hidden Field for Total Calculation Submission -->
+                        <input type="hidden" id="hiddenTotal" name="estimatedTotal" value="$0.00">
 
                         <!-- Total & Action -->
                         <div class="border-t border-gray-200 dark:border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -742,9 +730,8 @@
                             
                             <!-- Action Button -->
                             <div class="flex flex-col gap-3 w-full sm:w-auto">
-                                <button type="button" onclick="initiateCheckout()" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 w-full">
-                                    <i class="ph-bold ph-calendar-plus"></i> <span data-i18n="btn_book_cal">Schedule Booking</span>
-                                    <div class="loader !border-gray-300 !border-t-white" id="loaderCal"></div>
+                                <button type="submit" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 w-full">
+                                    <i class="ph-bold ph-paper-plane-right"></i> <span data-i18n="btn_submit_request">Send Booking Request</span>
                                 </button>
                             </div>
                         </div>
@@ -761,7 +748,7 @@
                         <i class="ph-fill ph-calendar-check text-5xl text-primary mb-4"></i>
                         <h3 class="text-3xl font-bold mb-4" data-i18n="book_side_title">Frictionless Scheduling</h3>
                         <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed" data-i18n="book_side_desc">
-                            We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.
+                            We've integrated seamless booking flows to save you time. Select your desired packages, input your details, and we'll connect with you right away to finalize your spot on our schedule.
                         </p>
                     </div>
 
@@ -771,8 +758,8 @@
                                 <i class="ph-bold ph-shield-check text-xl"></i>
                             </div>
                             <div>
-                                <h5 class="font-bold text-lg text-gray-900 dark:text-white mb-1" data-i18n="trust_1_title">Secure Payment</h5>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="trust_1_desc">Your data is encrypted and handled by industry-leading processors.</p>
+                                <h5 class="font-bold text-lg text-gray-900 dark:text-white mb-1" data-i18n="trust_1_title">Secure & Easy</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="trust_1_desc">No payment needed upfront to lock down your reservation.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -789,25 +776,6 @@
 
             </div>
         </div>
-        
-        <!-- Mock Modal for Checkout Demo -->
-        <div id="checkoutModal" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center backdrop-blur-sm opacity-0 transition-opacity duration-300">
-            <div class="bg-white dark:bg-darkCard p-8 rounded-3xl max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="modalContent">
-                <div class="text-center">
-                    <i id="modalIcon" class="ph-fill ph-check-circle text-6xl text-green-500 mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white" id="modalTitle">Connecting...</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-4" id="modalDesc">Redirecting you to the secure booking portal.</p>
-                    
-                    <!-- Captured Data Display -->
-                    <div class="bg-gray-100 dark:bg-gray-900 rounded-xl p-4 mb-6 text-left border border-gray-200 dark:border-gray-700">
-                        <p class="text-xs text-primary font-bold uppercase tracking-wider mb-2">Captured Booking Data:</p>
-                        <pre id="modalData" class="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono"></pre>
-                    </div>
-
-                    <button onclick="closeModal()" class="w-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3 rounded-xl transition">Close Demo</button>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Footer -->
@@ -815,11 +783,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
-                    <div class="flex items-center gap-2 mb-6">
-                        <i class="ph ph-sparkle text-3xl text-primary"></i>
-                        <span class="font-bold text-2xl tracking-tight">Sauve <span class="text-primary">Detailing</span></span>
+                    <div class="mb-6">
+                        <img src="logo.png" alt="Sauve Detailing" class="h-12 md:h-16 w-auto">
                     </div>
-                    <p class="text-gray-400 text-sm mb-6" data-i18n="ft_desc">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
+                    <p class="text-gray-400 text-sm mb-6">Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.</p>
                     <div class="flex gap-4">
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
                         <a href="javascript:void(0)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
@@ -830,20 +797,20 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_links">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="#packages" class="hover:text-primary transition" data-i18n="nav_packages">Packages</a></li>
-                        <li><a href="#services" class="hover:text-primary transition" data-i18n="nav_services">Services</a></li>
-                        <li><a href="#gallery" class="hover:text-primary transition" data-i18n="nav_gallery">Gallery</a></li>
-                        <li><a href="#booking" class="hover:text-primary transition" data-i18n="ft_book">Book Online</a></li>
+                        <li><a href="#packages" class="hover:text-primary transition">Packages</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition">Gallery</a></li>
+                        <li><a href="#booking" class="hover:text-primary transition">Book Online</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2" data-i18n="ft_services">Top Services</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="#" class="hover:text-primary transition" data-i18n="pkg_full_title">Full Detail</a></li>
-                        <li><a href="#" class="hover:text-primary transition" data-i18n="ft_ts2">Interior Deep Clean</a></li>
-                        <li><a href="#" class="hover:text-primary transition" data-i18n="ft_ts3">Exterior Wash & Wax</a></li>
-                        <li><a href="#" class="hover:text-primary transition" data-i18n="pkg_maint_title">Maintenance Plan</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Full Detail</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Interior Deep Clean</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Exterior Wash & Wax</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Maintenance Plan</a></li>
                     </ul>
                 </div>
 
@@ -852,7 +819,7 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex items-start gap-3">
                             <i class="ph-fill ph-map-pin mt-1 text-primary"></i>
-                            <span data-i18n="ft_loc">Mobile Service based in<br>Montreal, QC</span>
+                            <span>Mobile Service based in<br>Montreal, QC</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ph-fill ph-phone text-primary"></i>
@@ -867,10 +834,10 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p data-i18n="ft_copy">&copy; 2026 Sauve Detailing. All rights reserved.</p>
+                <p>&copy; 2026 Sauve Detailing. All rights reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition" data-i18n="ft_priv">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition" data-i18n="ft_terms">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -986,9 +953,9 @@
         function calculateTotal() {
             // Pricing structure
             const pricingMatrix = {
-                'full': { 'regular': 220, 'large': 270 },
-                'exterior': { 'regular': 120, 'large': 160 },
-                'interior': { 'regular': 150, 'large': 190 }
+                'Full Detail': { 'regular': 220, 'large': 270 },
+                'Exterior Detail': { 'regular': 120, 'large': 160 },
+                'Interior Detail': { 'regular': 150, 'large': 190 }
             };
 
             let basePrice = 0;
@@ -1016,7 +983,8 @@
             const checks = document.querySelectorAll('.addon-check');
             checks.forEach(check => {
                 if (check.checked) {
-                    addonsSum += parseFloat(check.value);
+                    // Pull the numeric price directly from data-price instead of value since Netlify form uses value 
+                    addonsSum += parseFloat(check.getAttribute('data-price'));
                     selectedAddons.push(check.getAttribute('data-name'));
                 }
             });
@@ -1031,6 +999,8 @@
             };
 
             document.getElementById('grandTotal').innerText = currentBookingData.total;
+            // Updates hidden field for Netlify form submission
+            document.getElementById('hiddenTotal').value = currentBookingData.total; 
         }
 
         calculateTotal();
@@ -1039,55 +1009,7 @@
             check.addEventListener('change', calculateTotal);
         });
 
-        // --- 6. Mock Checkout Handlers ---
-        function initiateCheckout() {
-            const btnCalText = document.querySelector('button[onclick="initiateCheckout()"] span');
-            const loaderCal = document.getElementById('loaderCal');
-            const modal = document.getElementById('checkoutModal');
-            const modalContent = document.getElementById('modalContent');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalDesc = document.getElementById('modalDesc');
-            const modalIcon = document.getElementById('modalIcon');
-            const modalData = document.getElementById('modalData');
-
-            btnCalText.style.display = 'none';
-            loaderCal.style.display = 'block';
-
-            setTimeout(() => {
-                btnCalText.style.display = 'block';
-                loaderCal.style.display = 'none';
-
-                const dataString = `Package: ${currentBookingData.package}\nSize: ${currentBookingData.vehicleSize}\nAdd-ons: ${currentBookingData.addons}\nTotal: ${currentBookingData.total}`;
-                modalData.innerText = dataString;
-
-                modalIcon.className = "ph-fill ph-calendar-check text-6xl text-primary mb-4";
-                modalTitle.innerText = "Connecting Booking System";
-                modalDesc.innerText = "In production, this passes data to your calendar booking and payment link seamlessly.";
-
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    modalContent.classList.remove('scale-95');
-                }, 10);
-
-            }, 1000);
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('checkoutModal');
-            const modalContent = document.getElementById('modalContent');
-            
-            modal.classList.add('opacity-0');
-            modalContent.classList.add('scale-95');
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 300);
-        }
-
-        // --- 7. Lightbox & Gallery Logic ---
+        // --- 6. Lightbox & Gallery Logic ---
         let currentGalleryImages = [];
         let currentLightboxIndex = 0;
         let isZoomed = false;
@@ -1198,7 +1120,7 @@
             }
         }
 
-        // --- 8. i18n Translation Logic (English / French) ---
+        // --- 7. i18n Translation Logic (English / French) ---
         let currentLang = 'en';
 
         const dictionary = {
@@ -1234,25 +1156,20 @@
                 srv_dry: "Dry Vehicle", srv_dry_desc: "Carefully dries vehicle to prevent water spots.",
                 srv_wax: "Hydrophobic Wax", srv_wax_desc: "Adds deep shine and water-repellent protection.",
                 srv_pet: "Pet Hair Removal", srv_pet_desc: "Removes embedded pet hair from all interior surfaces.",
-                srv_trim: "Trim Restoration", srv_trim_desc: "Restores faded trim to like-new condition.",
-                srv_carpet: "Carpet Shampoo", srv_carpet_desc: "Deep cleans carpets, removing stains and odors.",
-                srv_clay: "Clay Bar Treatment", srv_clay_desc: "Removes surface contaminants for smooth, clean paint.",
-                srv_salt: "Salt Removal", srv_salt_desc: "Salt stains are ugly, we make your mats look fresh again.",
-                calc_title: "Book Your Service", calc_desc: "Configure your detail and book a date instantly.",
-                calc_step1: "1. Select Package", calc_step2: "2. Vehicle Size", calc_step3: "3. Customize (Add-ons)",
+                calc_title: "Book Your Service", calc_desc: "Configure your detail and send a booking request.",
+                calc_step1: "1. Select Package", calc_step2: "2. Vehicle Size", calc_step3: "3. Customize (Add-ons)", 
+                calc_step4: "4. Your Details", calc_step5: "5. When would you like this done?",
+                label_name: "Full Name", label_phone: "Phone Number", time_select: "Select a timeline...",
+                time_asap: "ASAP", time_this_week: "This week", time_next_week: "Next week",
                 size_small: "Sedan & SUV (Base Price)", size_med: "Small SUV / Crossover (+20%)", size_large: "Vans, 3 Rows & Trucks (+$40-$50)",
-                calc_total_est: "Estimated Total", btn_book_cal: "Schedule Booking",
+                calc_total_est: "Estimated Total", btn_submit_request: "Send Booking Request",
                 calc_disclaimer: "* Price is subject to change if your vehicle's condition is significantly worse than expected.",
-                book_side_title: "Frictionless Scheduling", book_side_desc: "We've integrated seamless booking flows to save you time. Select your desired packages and lock in your time block on our schedule. Secure payment is collected during booking.",
-                trust_1_title: "Secure Payment", trust_1_desc: "Your data is encrypted and handled by industry-leading processors.",
+                book_side_title: "Frictionless Scheduling", book_side_desc: "We've integrated seamless booking flows to save you time. Select your desired packages, input your details, and we'll connect with you right away to finalize your spot on our schedule.",
+                trust_1_title: "Secure & Easy", trust_1_desc: "No payment needed upfront to lock down your reservation.",
                 trust_2_title: "We Travel To You", trust_2_desc: "Fully mobile setup requires only your keys.",
                 gal_sub: "Our Work", gal_title: "Showroom Results", gal_zoom_hint: "Click image to zoom",
                 area_sub: "Service Areas", area_title: "Greater Montreal Region", area_desc: "We bring our premium mobile detailing unit directly to your driveway, workplace, or condo across these major locations and their surrounding neighborhoods.",
-                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us",
-                ft_desc: "Premium mobile car detailing serving the greater area. We bring the showroom to your driveway.",
-                ft_book: "Book Online", ft_ts2: "Interior Deep Clean", ft_ts3: "Exterior Wash & Wax",
-                ft_loc: "Mobile Service based in<br>Montreal, QC", ft_copy: "&copy; 2026 Sauve Detailing. All rights reserved.",
-                ft_priv: "Privacy Policy", ft_terms: "Terms of Service"
+                ft_links: "Quick Links", ft_services: "Top Services", ft_contact: "Contact Us"
             },
             fr: {
                 nav_packages: "Forfaits", nav_services: "Services", nav_gallery: "Galerie", nav_contact: "Contact", nav_book: "Réserver", nav_theme: "Changer de thème",
@@ -1286,25 +1203,20 @@
                 srv_dry: "Séchage", srv_dry_desc: "Séchage minutieux pour éviter les taches d'eau.",
                 srv_wax: "Cire Hydrophobe", srv_wax_desc: "Ajoute une brillance profonde et une protection hydrofuge.",
                 srv_pet: "Poils d'Animaux", srv_pet_desc: "Enlève les poils d'animaux incrustés de toutes les surfaces.",
-                srv_trim: "Restauration des Garnitures", srv_trim_desc: "Restaure les plastiques décolorés à l'état neuf.",
-                srv_carpet: "Shampoing des Tapis", srv_carpet_desc: "Nettoie en profondeur les tapis, enlève taches et odeurs.",
-                srv_clay: "Barre d'Argile (Clay Bar)", srv_clay_desc: "Enlève les contaminants de surface pour une peinture lisse.",
-                srv_salt: "Enlèvement de Sel", srv_salt_desc: "Les taches de sel sont laides, nous rafraîchissons vos tapis.",
-                calc_title: "Réservez Votre Service", calc_desc: "Configurez votre esthétique et réservez une date instantanément.",
+                calc_title: "Réservez Votre Service", calc_desc: "Configurez votre esthétique et envoyez une demande.",
                 calc_step1: "1. Sélectionner un Forfait", calc_step2: "2. Taille du Véhicule", calc_step3: "3. Personnaliser (Suppléments)",
+                calc_step4: "4. Vos Coordonnées", calc_step5: "5. Échéancier", 
+                label_name: "Nom Complet", label_phone: "Numéro de téléphone", time_select: "Sélectionnez un échéancier...",
+                time_asap: "Dès que possible", time_this_week: "Cette semaine", time_next_week: "La semaine prochaine",
                 size_small: "Berline & VUS (Prix de base)", size_med: "Petit VUS / Multisegment (+20%)", size_large: "Fourgonnettes, 3 rangées & Camions (+$40-$50)",
-                calc_total_est: "Total Estimé", btn_book_cal: "Planifier la Réservation",
+                calc_total_est: "Total Estimé", btn_submit_request: "Envoyer la demande",
                 calc_disclaimer: "* Le prix est sujet à changement si l'état de votre véhicule est considérablement pire que prévu.",
-                book_side_title: "Planification Sans Friction", book_side_desc: "Nous avons intégré des flux de réservation transparents. Sélectionnez vos forfaits et bloquez votre plage horaire sur notre calendrier. Le paiement sécurisé est collecté lors de la réservation.",
-                trust_1_title: "Paiement Sécurisé", trust_1_desc: "Vos données sont cryptées et traitées par des leaders de l'industrie.",
+                book_side_title: "Planification Sans Friction", book_side_desc: "Sélectionnez vos forfaits souhaités, entrez vos coordonnées, et nous vous contacterons immédiatement pour finaliser votre place sur notre horaire.",
+                trust_1_title: "Sécurisé et Facile", trust_1_desc: "Aucun paiement initial n'est requis pour garantir votre réservation.",
                 trust_2_title: "Nous nous déplaçons", trust_2_desc: "L'installation mobile ne nécessite que vos clés.",
                 gal_sub: "Notre Travail", gal_title: "Résultats de Salle de Montre", gal_zoom_hint: "Cliquez sur l'image pour zoomer",
                 area_sub: "Zones Desservies", area_title: "Région du Grand Montréal", area_desc: "Nous apportons notre unité d'esthétique mobile premium directement dans votre entrée, lieu de travail ou condo à travers ces secteurs principaux et leurs quartiers environnants.",
-                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous",
-                ft_desc: "Esthétique automobile mobile premium desservant la grande région. Nous apportons la salle de montre dans votre entrée.",
-                ft_book: "Réserver en ligne", ft_ts2: "Nettoyage Intérieur en Profondeur", ft_ts3: "Lavage et Cire Extérieur",
-                ft_loc: "Service mobile basé à<br>Montréal, QC", ft_copy: "&copy; 2026 Sauve Detailing. Tous droits réservés.",
-                ft_priv: "Politique de confidentialité", ft_terms: "Conditions d'utilisation"
+                ft_links: "Liens Rapides", ft_services: "Top Services", ft_contact: "Contactez-Nous"
             }
         };
 
@@ -1320,6 +1232,14 @@
                 const key = el.getAttribute('data-i18n');
                 if (dictionary[currentLang][key]) {
                     el.innerHTML = dictionary[currentLang][key];
+                }
+            });
+
+            // Update placeholders for inputs
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dictionary[currentLang][key]) {
+                    el.placeholder = dictionary[currentLang][key];
                 }
             });
         }
